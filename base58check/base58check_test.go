@@ -182,3 +182,76 @@ func TestCheckEncode_RippleAlphabet(t *testing.T) {
 		[]byte("hello1234"),
 		[]byte("hello world!"),
 		[]byte("1234567890!@#$%^&*()"),
+		[]byte("how many roads must a man walk down"),
+	}
+
+	cases := []struct {
+		checksumType ChecksumType
+		payloads     [][]byte
+		expected     []string
+	}{
+		{
+			checksumType: ChecksumDoubleSha256,
+			payloads:     payloads,
+			expected: []string{
+				"sQJm86",
+				"96LEsDUfuYXC7SogYi",
+				"Dt6HcEYCpSzzFiCNfTy8LJ",
+				"nV3EMkzy9QZKJwewzgnfpWyk7vwma3z8a",
+				"pBBvAEYAEkH7YGCo1yVNAkxCTLX1NJq9A2QM9JaBmfcxB2DK9QxkPQ",
+			},
+		},
+	}
+
+	for _, c := range cases {
+		encoder.ChecksumType = c.checksumType
+		encoded := []string{}
+		for _, p := range c.payloads {
+			r := encoder.CheckEncode(p)
+			encoded = append(encoded, r)
+		}
+		assert.True(t, reflect.DeepEqual(c.expected, encoded), fmt.Sprint(encoded))
+	}
+}
+
+func TestCheckDecode_RippleAlphabet(t *testing.T) {
+
+	encoder := RippleEncoder
+
+	expected := [][]byte{
+		[]byte(""),
+		[]byte("hello1234"),
+		[]byte("hello world!"),
+		[]byte("1234567890!@#$%^&*()"),
+		[]byte("how many roads must a man walk down"),
+	}
+
+	cases := []struct {
+		checksumType ChecksumType
+		encoded      []string
+		expected     [][]byte
+	}{
+		{
+			checksumType: ChecksumDoubleSha256,
+			encoded: []string{
+				"sQJm86",
+				"96LEsDUfuYXC7SogYi",
+				"Dt6HcEYCpSzzFiCNfTy8LJ",
+				"nV3EMkzy9QZKJwewzgnfpWyk7vwma3z8a",
+				"pBBvAEYAEkH7YGCo1yVNAkxCTLX1NJq9A2QM9JaBmfcxB2DK9QxkPQ",
+			},
+			expected: expected,
+		},
+	}
+
+	for _, c := range cases {
+		encoder.ChecksumType = c.checksumType
+		decoded := [][]byte{}
+		for _, p := range c.encoded {
+			r, err := encoder.CheckDecode(p)
+			assert.NoError(t, err)
+			decoded = append(decoded, r)
+		}
+		assert.True(t, reflect.DeepEqual(c.expected, decoded), fmt.Sprint(decoded))
+	}
+}
