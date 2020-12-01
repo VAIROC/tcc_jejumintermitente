@@ -16,4 +16,12 @@ func (e *base32Encoder) numToCode() map[byte]rune {
 	return result
 }
 
-func (e *base32Encoder) co
+func (e *base32Encoder) codeToNum() map[rune]byte {
+	result := make(map[rune]byte)
+	for i, r := range e.alphabet {
+		result[r] = byte(i)
+	}
+	return result
+}
+
+func (e *base32Encoder) encode(
