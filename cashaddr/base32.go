@@ -24,4 +24,10 @@ func (e *base32Encoder) codeToNum() map[rune]byte {
 	return result
 }
 
-func (e *base32Encoder) encode(
+func (e *base32Encoder) encode(payload []byte) string {
+	result := []rune{}
+	set := e.numToCode()
+	for _, b := range payload {
+		result = append(result, set[b])
+	}
+	retur
