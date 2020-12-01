@@ -30,4 +30,11 @@ func (e *base32Encoder) encode(payload []byte) string {
 	for _, b := range payload {
 		result = append(result, set[b])
 	}
-	retur
+	return string(result)
+}
+
+func (e *base32Encoder) decode(str string) []byte {
+	result := []byte{}
+	set := e.codeToNum()
+	for _, r := range str {
+		result = append(
