@@ -111,3 +111,84 @@ func packAddress(addr string) []byte {
 	versionByte := addrType<<3 | byte(encodedSize)
 	result, err := bech32.ConvertBits(append([]byte{versionByte}, decoded...), 8, 5, true)
 	if err != nil {
+		panic(ErrInvalidLegacyAddr)
+	}
+	return result
+}
+
+func calcChecksum(prefix string, packedAddr []byte) []byte {
+	expandedPrefix := expandPrefix(prefix)
+	poly := polymod(append(expandedPrefix, packedAddr...))
+	result := []byte{}
+	for i := 0; i < 8; i++ {
+		result = append(result, byte(poly>>(5*(7-i))&0x1F))
+	}
+	return result
+}
+
+func calcPrefix(version byte) string {
+	switch {
+	case version == 0 || version == 5:
+		return "bitcoincash"
+	case version == 111 || version == 196:
+		return "bchtest"
+	case version == 192:
+		return "classzz"
+	default:
+		panic(ErrUnsupported.Error())
+	}
+}
+
+func calcAddrType(version byte) byte {
+	switch {
+	case version == 0 || version == 111:
+		return 0
+	case version == 5 || version == 196:
+		return 1
+	case version == 192:
+		return 24
+	default:
+		panic(ErrUnsupported.Error())
+	}
+}
+
+func expandPrefix(prefix string) []byte {
+	result := []byte{}
+	prefixData := []byte(prefix)
+
+	for _, b := range prefixData {
+		result = append(result, b&0x1F)
+	}
+
+	return append(result, 0x00)
+}
+
+func polymod(data []byte) int {
+	acc := 1
+	for _, b := range data {
+		c0 := acc >> 35
+		acc = ((acc & 0x07FFFFFFFF) << 5) ^ int(b)
+
+		if (c0 & 0x01) != 0 {
+			acc ^= 0x98F2BC8E61
+		}
+
+		if (c0 & 0x02) != 0 {
+			acc ^= 0x79B76D99E2
+		}
+
+		if (c0 & 0x04) != 0 {
+			acc ^= 0xF33E5FB3C4
+		}
+
+		if (c0 & 0x08) != 0 {
+			acc ^= 0xAE2EABE2A8
+		}
+
+		if (c0 & 0x10) != 0 {
+			acc ^= 0x1E4F43E470
+		}
+	}
+
+	return acc ^ 1
+}
