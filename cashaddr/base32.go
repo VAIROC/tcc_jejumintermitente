@@ -37,4 +37,7 @@ func (e *base32Encoder) decode(str string) []byte {
 	result := []byte{}
 	set := e.codeToNum()
 	for _, r := range str {
-		result = append(
+		result = append(result, set[r])
+	}
+	return result
+}
