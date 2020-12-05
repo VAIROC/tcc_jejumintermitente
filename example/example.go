@@ -16,4 +16,10 @@ func validateBitcoinAddr() {
 	fmt.Printf("Address type: %s\n", result.Type)
 }
 
-func validateEOSAddr(
+func validateEOSAddr() {
+	client := validator.EOSClient{
+		Endpoint: os.Getenv("AVA_EOS_ENDPOINT"),
+	}
+	v := &validator.EOS{Client: &client}
+
+	result := v.ValidateAddress("huobid
