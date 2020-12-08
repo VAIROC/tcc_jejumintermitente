@@ -22,4 +22,7 @@ func validateEOSAddr() {
 	}
 	v := &validator.EOS{Client: &client}
 
-	result := v.ValidateAddress("huobid
+	result := v.ValidateAddress("huobideposit", validator.Mainnet)
+	if result.Status == validator.Success {
+		fmt.Printf("Address is valid?: %t\n", result.IsValid)
+		fmt.Printf("Address type: %s\n", result.Typ
