@@ -25,4 +25,11 @@ func validateEOSAddr() {
 	result := v.ValidateAddress("huobideposit", validator.Mainnet)
 	if result.Status == validator.Success {
 		fmt.Printf("Address is valid?: %t\n", result.IsValid)
-		fmt.Printf("Address type: %s\n", result.Typ
+		fmt.Printf("Address type: %s\n", result.Type)
+	} else {
+		fmt.Printf("Address validation failed: %s\n", result.Msg)
+	}
+
+	deployed, err := v.IsContractDeployed("huobideposit")
+	if err != nil {
+		fmt.Prin
