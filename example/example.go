@@ -39,4 +39,9 @@ func validateEOSAddr() {
 }
 
 func main() {
-	fmt.Println("Validate
+	fmt.Println("Validate Bitcoin Address:")
+	validateBitcoinAddr()
+
+	fmt.Println("\nValidate EOS Address:")
+	validateEOSAddr()
+}
