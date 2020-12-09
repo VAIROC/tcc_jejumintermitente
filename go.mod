@@ -2,4 +2,6 @@ module github.com/LanfordCai/ava
 
 go 1.15
 
-require
+require (
+	github.com/btcsuite/btcutil v0.0.0-20190425235716-9e5f4b9a998d
+	github.com/filecoin-project/go-address v0.0.5-0.20201103152444-f2023ef
