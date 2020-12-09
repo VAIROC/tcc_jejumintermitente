@@ -32,4 +32,11 @@ func validateEOSAddr() {
 
 	deployed, err := v.IsContractDeployed("huobideposit")
 	if err != nil {
-		fmt.Prin
+		fmt.Printf("Get deployed info failed: %s\n", err.Error())
+	} else {
+		fmt.Printf("Contract is deployed?: %t\n", deployed)
+	}
+}
+
+func main() {
+	fmt.Println("Validate
