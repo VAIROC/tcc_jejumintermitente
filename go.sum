@@ -6,4 +6,5 @@ github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSs
 github.com/filecoin-project/go-address v0.0.5-0.20201103152444-f2023ef3f5bb h1:Cbu7YYsXHtVlPEJ+eqbBx2S3ElmWCB0NjpGPYvvvCrA=
 github.com/filecoin-project/go-address v0.0.5-0.20201103152444-f2023ef3f5bb/go.mod h1:jr8JxKsYx+lQlQZmF5i2U0Z+cGQ59wMIps/8YW/lDj8=
 github.com/filecoin-project/go-crypto v0.0.0-20191218222705-effae4ea9f03 h1:2pMXdBnCiXjfCYx/hLqFxccPoqsSveQFxVLvNxy9bus=
-github.com/filecoin-project/go-crypto v0.0.0-20191218222705-eff
+github.com/filecoin-project/go-crypto v0.0.0-20191218222705-effae4ea9f03/go.mod h1:+viYnvGtUTgJRdy6oaeF4MTFKAfatX071MPDPBL11EQ=
+github.com/google/go-cmp v0.4.0/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE
