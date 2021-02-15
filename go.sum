@@ -68,4 +68,6 @@ github.com/snksoft/crc v1.1.0 h1:HkLdI4taFlgGGG1KvsWMpz78PkOC9TkPVpTV/cuWn48=
 github.com/snksoft/crc v1.1.0/go.mod h1:5/gUOsgAm7OmIhb6WJzw7w5g2zfJi4FrHYgGPdshE+A=
 github.com/spaolacci/murmur3 v1.1.0 h1:7c1g84S4BPRrfL5Xrdp6fOJ206sU9y293DDHaoy0bLI=
 github.com/spaolacci/murmur3 v1.1.0/go.mod h1:JwIasOWyU6f++ZhiEuf87xNszmSA2myDM2Kzu9HwQUA=
-github.com/stretchr/objx v0.1.0/go.mod h1:HFk
+github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
+github.com/stretchr/testify v1.4.0 h1:2E4SXV/wtOkTonXsotYi4li6zVWxYlZuYNCXe9XRJyk=
+github.com/stretchr/te
