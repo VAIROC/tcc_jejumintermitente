@@ -12,4 +12,9 @@ var _ Prefixer = (*Aeternity)(nil)
 
 // ValidateAddress returns validate result of aeternity address
 func (v *Aeternity) ValidateAddress(addr string, network NetworkType) *Result {
-	if !IsPrefixVa
+	if !IsPrefixValid(v, addr, network) {
+		return &Result{Success, false, Unknown, ""}
+	}
+
+	encodedPubkey := AddressWithoutPrefix(v, addr, network)
+	decoded, _, err := base58.CheckDecode(encodedPub
