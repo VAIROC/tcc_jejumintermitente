@@ -24,4 +24,6 @@ func (v *Aeternity) ValidateAddress(addr string, network NetworkType) *Result {
 	return &Result{Success, true, Normal, ""}
 }
 
-// GetP
+// GetPrefix returns the prefix of aeternity address
+func (v *Aeternity) GetPrefix(network NetworkType) string {
+	retu
