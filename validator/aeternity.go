@@ -17,4 +17,11 @@ func (v *Aeternity) ValidateAddress(addr string, network NetworkType) *Result {
 	}
 
 	encodedPubkey := AddressWithoutPrefix(v, addr, network)
-	decoded, _, err := base58.CheckDecode(encodedPub
+	decoded, _, err := base58.CheckDecode(encodedPubkey)
+	if err != nil || len(decoded) != 31 {
+		return &Result{Success, false, Unknown, ""}
+	}
+	return &Result{Success, true, Normal, ""}
+}
+
+// GetP
