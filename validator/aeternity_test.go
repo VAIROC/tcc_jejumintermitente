@@ -24,4 +24,6 @@ func TestAeternityValidateAddress(t *testing.T) {
 	var invalidCases = map[string]*Result{
 		"ak_4h3c6RH52R": {Success, false, Unknown, ""},
 		"akzvU8YQLagjcfng7Tg8yCdiZ1rpiWNp1PBn3vtUs44utSvbJVR":    {Success, false, Unknown, ""},
-		"ak_zvU8YQLagjcfng7Tg8yCdiZ1rpiWNp1PBn3vtUs
+		"ak_zvU8YQLagjcfng7Tg8yCdiZ1rpiWNp1PBn3vtUs44utSvbJV":    {Success, false, Unknown, ""},
+		"aK_zvU8YQLagjcfng7Tg8yCdiZ1rpiWNp1PBn3vtUs44utSvbJVR":   {Success, false, Unknown, ""},
+		"
