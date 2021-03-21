@@ -24,4 +24,6 @@ func TestArweaveValidateAddress(t *testing.T) {
 		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
 	}
 
-	var invalidCa
+	var invalidCases = map[string]*Result{
+		"tO710xCGwTPGKtOkEq3PMbWqXs9jOGiL8TCpDuw0":     {Success, false, Unknown, ""},
+		"_m4ftvKoEnbB7toHVBkuZWXYRK0j1mmgyHsug2ayffY1": {Su
