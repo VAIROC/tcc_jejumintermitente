@@ -26,4 +26,6 @@ func TestArweaveValidateAddress(t *testing.T) {
 
 	var invalidCases = map[string]*Result{
 		"tO710xCGwTPGKtOkEq3PMbWqXs9jOGiL8TCpDuw0":     {Success, false, Unknown, ""},
-		"_m4ftvKoEnbB7toHVBkuZWXYRK0j1mmgyHsug2ayffY1": {Su
+		"_m4ftvKoEnbB7toHVBkuZWXYRK0j1mmgyHsug2ayffY1": {Success, false, Unknown, ""},
+		"XepqBRwnq8SNfple3W#h0VWo06P8KQ0hVlNOjOgrJ5w":  {Success, false, Unknown, ""},
+		"LjI1ooRZhj3wLK20000bCjOpgUmfOo_BplG4mCGuxU":   {Su
