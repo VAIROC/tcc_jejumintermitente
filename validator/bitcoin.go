@@ -52,3 +52,4 @@ func (v *Bitcoin) SegwitProgramLength(addrType AddressType) int {
 	}
 
 	panic(ErrInvalidAddrType.Error())
+}
