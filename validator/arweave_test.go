@@ -35,4 +35,7 @@ func TestArweaveValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range invalidCases {
-		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainn
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
+	}
+}
