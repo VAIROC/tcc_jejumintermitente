@@ -8,4 +8,8 @@ import (
 )
 
 func TestBitcoinValidateAddress(t *testing.T) {
-	validator := &Bitcoin
+	validator := &Bitcoin{}
+
+	var mainnetCases = map[string]*Result{
+		"1HX2swQNH9ezE8RagPPAaSBTcK3in9xWYF":                             {Success, true, P2PKH, ""},
+		"1
