@@ -15,4 +15,6 @@ func TestBitcoinValidateAddress(t *testing.T) {
 		"1NQhfGtWRwU6zg5G58TfQibHyJEuo6ZYXw":                             {Success, true, P2PKH, ""},
 		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854":                             {Success, true, P2PKH, ""},
 		"3NJHZpnnk3bFxqVHVS2vUomUBznju6W8D9":                             {Success, true, P2SH, ""},
-		"3DtsukMi6SYqWLvE1hh5rJnHePvD77Rsga":                             {Succe
+		"3DtsukMi6SYqWLvE1hh5rJnHePvD77Rsga":                             {Success, true, P2SH, ""},
+		"3EktnHQD7RiAE6uzMj2ZifT9YgRrkSgzQX":                             {Success, true, P2SH, ""},
+		"bc1q2l9k4lm5z4mtsl6smmj9qxy03e65
