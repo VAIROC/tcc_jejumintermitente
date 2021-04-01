@@ -22,4 +22,8 @@ func TestBitcoinValidateAddress(t *testing.T) {
 		"bc1qql2qamp2az7h5ejnjyuxt4294watgcmrd76n8c":                     {Success, true, P2WPKH, ""},
 		"bc1qxcjkl0gyffz2tz935cepgetruee7n3kcva80a0xd9wgcyz93r2pqkgkjwv": {Success, true, P2WSH, ""},
 		"bc1qf2epzuxpm32t4g02m9ya2a3lcphqg8kzp8khchgjedg2w4n4300s0057u5": {Success, true, P2WSH, ""},
-		"bc1qwqdg6squsna38e4679
+		"bc1qwqdg6squsna38e46795at95yu9atm8azzmyvckulcc7kytlcckxswvvzej": {Success, true, P2WSH, ""},
+	}
+
+	for addr, result := range mainnetCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAdd
