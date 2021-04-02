@@ -26,4 +26,8 @@ func TestBitcoinValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range mainnetCases {
-		assert.True(t, reflect.DeepEqual(validator.ValidateAdd
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+		assert.False(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
+	}
+
+	var testnetCases = map[string
