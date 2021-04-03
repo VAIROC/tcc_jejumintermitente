@@ -30,4 +30,6 @@ func TestBitcoinValidateAddress(t *testing.T) {
 		assert.False(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
 	}
 
-	var testnetCases = map[string
+	var testnetCases = map[string]*Result{
+		"mipcBbFg9gMiCh81Kj8tqqdgoZub1ZJRfn":                             {Success, true, P2PKH, ""},
+		"mrDbAZMsWY4disHVThaieUBLA29oc
