@@ -32,4 +32,5 @@ func TestBitcoinValidateAddress(t *testing.T) {
 
 	var testnetCases = map[string]*Result{
 		"mipcBbFg9gMiCh81Kj8tqqdgoZub1ZJRfn":                             {Success, true, P2PKH, ""},
-		"mrDbAZMsWY4disHVThaieUBLA29oc
+		"mrDbAZMsWY4disHVThaieUBLA29ocvM19P":                             {Success, true, P2PKH, ""},
+		"mx27DTNdKZgJbLHwtBJt1mcRPcejRNUMkD":                             {Success, 
