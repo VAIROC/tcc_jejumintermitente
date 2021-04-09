@@ -38,4 +38,8 @@ func TestBitcoinValidateAddress(t *testing.T) {
 		"2MzQwSSnBHWHqSAqtTVQ6v47XtaisrJa1Vc":                            {Success, true, P2SH, ""},
 		"2NDhzMt2D9ZxXapbuq567WGeWP7NuDN81cg":                            {Success, true, P2SH, ""},
 		"tb1q63svxth22j5r73rc8xth74n5uu69n7vc0um98f":                     {Success, true, P2WPKH, ""},
-		"tb1qp0we5epypgj4acd2c4au58045ruud2pd6heuee":                     {Success, true, P2WPKH, ""}
+		"tb1qp0we5epypgj4acd2c4au58045ruud2pd6heuee":                     {Success, true, P2WPKH, ""},
+		"tb1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0gdcccefvpysxf3q0sl5k7": {Success, true, P2WSH, ""},
+	}
+
+	for addr, result := range testnetCas
