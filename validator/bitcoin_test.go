@@ -48,4 +48,6 @@ func TestBitcoinValidateAddress(t *testing.T) {
 	}
 
 	var invalidCases = map[string]*Result{
-		"1YURbVuocZZZPi8LPU6GfAcKShYY7hLXbrG75v9zBXbS2zaqaHfSmGJvNEZwU3oETNZdPNxqLwR5C": {Success, false, 
+		"1YURbVuocZZZPi8LPU6GfAcKShYY7hLXbrG75v9zBXbS2zaqaHfSmGJvNEZwU3oETNZdPNxqLwR5C": {Success, false, Unknown, ""},
+		"1HX2swQNH9ezE8RagPPAaSBTcK3in9xWYF1":                                           {Success, false, Unknown, ""},
+		"1NQhfItWRwU6zg5G58TfQibHyJEuo6ZYXw":   
