@@ -53,4 +53,5 @@ func TestBitcoinValidateAddress(t *testing.T) {
 		"1NQhfItWRwU6zg5G58TfQibHyJEuo6ZYXw":                                            {Success, false, Unknown, ""},
 		"0NT5SNNaoAXzvxRUvYGxiif93q7o9u4854":                                            {Success, false, Unknown, ""},
 		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854 ":                                           {Success, false, Unknown, ""},
-		"2b1qrp33g0q5c5txsp9arysrx4k6zdkfs4
+		"2b1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0gdcccefvpysxf3q0sl5k7":                {Success, false, Unknown, ""},
+		"tb1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0gdcccefvpysxf3q0sl5k7":            
