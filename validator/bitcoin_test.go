@@ -64,4 +64,6 @@ func TestBitcoinValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range invalidCases {
-		assert.True(
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+}
