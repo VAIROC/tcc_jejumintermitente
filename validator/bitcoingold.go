@@ -19,4 +19,13 @@ func (v *BitcoinGold) ValidateAddress(addr string, network NetworkType) *Result 
 func (v *BitcoinGold) AddressVersion(addrType AddressType, network NetworkType) byte {
 	if network == Mainnet {
 		if addrType == P2PKH {
-			r
+			return 38
+		}
+		return 23
+	}
+
+	if addrType == P2PKH {
+		return 111
+	}
+	return 196
+}
