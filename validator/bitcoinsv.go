@@ -14,4 +14,7 @@ func (v *BitcoinSV) ValidateAddress(addr string, network NetworkType) *Result {
 	return &Result{Success, false, Unknown, ""}
 }
 
-// AddressVersion returns bitc
+// AddressVersion returns bitcoin address version according to the address type and
+// network type
+func (v *BitcoinSV) AddressVersion(addrType AddressType, network NetworkType) byte {
+	if networ
