@@ -16,4 +16,9 @@ func TestBitcoinSVValidateAddress(t *testing.T) {
 		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854": {Success, true, P2PKH, ""},
 		"3NJHZpnnk3bFxqVHVS2vUomUBznju6W8D9": {Success, true, P2SH, ""},
 		"3DtsukMi6SYqWLvE1hh5rJnHePvD77Rsga": {Success, true, P2SH, ""},
-		"3EktnHQD7RiAE6uzMj2ZifT9YgRrkSgzQX": {Success, true, P2S
+		"3EktnHQD7RiAE6uzMj2ZifT9YgRrkSgzQX": {Success, true, P2SH, ""},
+	}
+
+	for addr, result := range mainnetCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	
