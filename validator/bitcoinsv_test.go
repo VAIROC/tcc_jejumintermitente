@@ -30,4 +30,8 @@ func TestBitcoinSVValidateAddress(t *testing.T) {
 		"mx27DTNdKZgJbLHwtBJt1mcRPcejRNUMkD":  {Success, true, P2PKH, ""},
 		"2N3WBNpL3ZVj5PwQhSTPYZdrR7QXiKttChN": {Success, true, P2SH, ""},
 		"2MzQwSSnBHWHqSAqtTVQ6v47XtaisrJa1Vc": {Success, true, P2SH, ""},
-		"2NDhzM
+		"2NDhzMt2D9ZxXapbuq567WGeWP7NuDN81cg": {Success, true, P2SH, ""},
+	}
+
+	for addr, result := range testnetCases {
+		assert.True(t, reflect.DeepEqual(validator
