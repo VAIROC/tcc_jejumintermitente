@@ -41,4 +41,5 @@ func TestBitcoinSVValidateAddress(t *testing.T) {
 	var invalidCases = map[string]*Result{
 		"bc1q2l9k4lm5z4mtsl6smmj9qxy03e65x3maz4p9xv":                                    {Success, false, Unknown, ""},
 		"bc1q86ml6tnunc2cs30centm2dnqqammrzqhkflc98":                                    {Success, false, Unknown, ""},
-		"bc1qql2qamp2az7h5ejnjyuxt4294watgcmrd76n8c":                          
+		"bc1qql2qamp2az7h5ejnjyuxt4294watgcmrd76n8c":                                    {Success, false, Unknown, ""},
+		"bc1qxcjkl0gyffz2tz935cepgetruee7n3kcva80a0xd9wgcyz93r2pqkgkjwv":                {Success, false, Unknown, ""
