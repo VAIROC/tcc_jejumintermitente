@@ -56,4 +56,9 @@ func TestBitcoinSVValidateAddress(t *testing.T) {
 		"tb1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0gdcccefvpysxf3q0sl5k7":                {Success, false, Unknown, ""},
 		"bc1qf2epzuxpm32t4g02m9ya2a3lcphqg8kzp8mhchgjedg2w4n4300s0057u5":                {Success, false, Unknown, ""},
 		"bb1qql2qamp2az7h5ejnjyuxt4294watgcmrd76n8c":                                    {Success, false, Unknown, ""},
-		"bc1q3l9k4lm5z4mtsl6smmj9qxy03e65x3maz4p9xv":                                 
+		"bc1q3l9k4lm5z4mtsl6smmj9qxy03e65x3maz4p9xv":                                    {Success, false, Unknown, ""},
+		"abcde": {Success, false, Unknown, ""},
+		"":      {Success, false, Unknown, ""},
+	}
+
+	for addr, result := range invalidCase
