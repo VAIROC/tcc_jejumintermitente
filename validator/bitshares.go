@@ -12,4 +12,12 @@ var _ OnchainValidator = (*Bitshares)(nil)
 // ValidateAddress ...
 func (e *Bitshares) ValidateAddress(addr string, network NetworkType) *Result {
 	if isValid := e.IsAddressFormatValid(addr, network); !isValid {
-		return &Result{Success, fal
+		return &Result{Success, false, Unknown, ""}
+	}
+
+	addrType, err := e.Client.GetAccount(addr)
+	if err != nil {
+		return &Result{Failure, false, Unknown, err.Error()}
+	}
+
+	if addrType == U
