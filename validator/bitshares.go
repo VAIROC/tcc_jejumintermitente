@@ -20,4 +20,12 @@ func (e *Bitshares) ValidateAddress(addr string, network NetworkType) *Result {
 		return &Result{Failure, false, Unknown, err.Error()}
 	}
 
-	if addrType == U
+	if addrType == Unknown {
+		return &Result{Success, false, Unknown, ""}
+	}
+
+	return &Result{Success, true, addrType, ""}
+}
+
+// IsAddressFormatValid ...
+func (e *Bits
