@@ -10,4 +10,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestBitsharesValidateAddres
+func TestBitsharesValidateAddress(t *testing.T) {
+	client := BitsharesClient{Endpoint: os.Getenv("AVA_BITSHARES_ENDPOINT")}
+	validator := &Bitshares{Client: &client}
+
+	var cases =
