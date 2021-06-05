@@ -17,4 +17,12 @@ func TestBitsharesValidateAddress(t *testing.T) {
 	var cases = map[string]*Result{
 		"zbbts001":             {Success, true, Normal, ""},
 		"beos.gateway":         {Success, true, Normal, ""},
-		"huobi-bts-withdrawal": {Success, t
+		"huobi-bts-withdrawal": {Success, true, Normal, ""},
+	}
+
+	for addr, result := range cases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+}
+
+func TestBi
