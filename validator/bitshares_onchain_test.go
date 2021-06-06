@@ -25,4 +25,6 @@ func TestBitsharesValidateAddress(t *testing.T) {
 	}
 }
 
-func TestBi
+func TestBitsharesValidateAddress_Failure(t *testing.T) {
+	client := BitsharesClient{Endpoint: "https://fakeurl"}
+	validator := &Bitshares{Client: &client}
