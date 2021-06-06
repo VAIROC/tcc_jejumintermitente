@@ -28,3 +28,11 @@ func TestBitsharesValidateAddress(t *testing.T) {
 func TestBitsharesValidateAddress_Failure(t *testing.T) {
 	client := BitsharesClient{Endpoint: "https://fakeurl"}
 	validator := &Bitshares{Client: &client}
+
+	var cases = []string{
+		"zbbts001",
+	}
+
+	for _, addr := range cases {
+		r := validator.ValidateAddress(addr, Mainnet)
+		assert.Equal
