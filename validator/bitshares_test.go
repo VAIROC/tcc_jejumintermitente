@@ -12,4 +12,11 @@ func TestBitsharesIsAddressFormatValid(t *testing.T) {
 	var validCases = []string{
 		"zbbts001",
 		"beos.gateway",
-		
+		"huobi-bts-withdrawal",
+	}
+
+	for _, addr := range validCases {
+		assert.True(t, validator.IsAddressFormatValid(addr, Mainnet), addr)
+	}
+
+	var invalidCases =
