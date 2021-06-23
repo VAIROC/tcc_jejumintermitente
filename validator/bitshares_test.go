@@ -19,4 +19,12 @@ func TestBitsharesIsAddressFormatValid(t *testing.T) {
 		assert.True(t, validator.IsAddressFormatValid(addr, Mainnet), addr)
 	}
 
-	var invalidCases =
+	var invalidCases = []string{
+		".bits2020bts",
+		"BTS4xXY8vZU1VGiggW5Qn7AhFcp5ti8vnWe9TVt8nUy1sUdFrLVUC",
+		"binance#123",
+		"ZBBTS001",
+		"",
+	}
+
+	for _, addr := range invalidCases {
