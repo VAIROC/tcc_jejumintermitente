@@ -19,4 +19,13 @@ func (c *BitsharesClient) GetAccount(addr string) (AddressType, error) {
 	}
 	resp, err := httpclient.Post(c.Endpoint, reqBody)
 	if err != nil {
-		r
+		return Unknown, err
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode > 299 {
+		return Unknown, nil
+	}
+
+	return Normal, nil
+}
