@@ -15,4 +15,11 @@ func (v *Bytom) ValidateAddress(addr string, network NetworkType) *Result {
 }
 
 // AddressHrp returns hrps of bytom according to the network
-fun
+func (v *Bytom) AddressHrp(network NetworkType) string {
+	if network == Mainnet {
+		return "bm"
+	}
+	return "tm"
+}
+
+// SegwitProgramLength returns segwit prog
