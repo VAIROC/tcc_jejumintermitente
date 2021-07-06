@@ -9,3 +9,10 @@ var _ SegwitAddress = (*Bytom)(nil)
 // ValidateAddress returns validate result of bytom address
 func (v *Bytom) ValidateAddress(addr string, network NetworkType) *Result {
 	if addrType := SegwitAddrType(v, addr, network); addrType != Unknown {
+		return &Result{Success, true, addrType, ""}
+	}
+	return &Result{Success, false, Unknown, ""}
+}
+
+// AddressHrp returns hrps of bytom according to the network
+fun
