@@ -22,4 +22,8 @@ func (v *Bytom) AddressHrp(network NetworkType) string {
 	return "tm"
 }
 
-// SegwitProgramLength returns segwit prog
+// SegwitProgramLength returns segwit program length of bytom
+func (v *Bytom) SegwitProgramLength(addrType AddressType) int {
+	if addrType == P2WPKH {
+		return 20
+	} else if addrType == P2WS
