@@ -26,4 +26,9 @@ func (v *Bytom) AddressHrp(network NetworkType) string {
 func (v *Bytom) SegwitProgramLength(addrType AddressType) int {
 	if addrType == P2WPKH {
 		return 20
-	} else if addrType == P2WS
+	} else if addrType == P2WSH {
+		return 32
+	}
+
+	panic(ErrInvalidAddrType.Error())
+}
