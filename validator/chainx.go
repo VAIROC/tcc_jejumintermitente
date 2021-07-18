@@ -22,4 +22,9 @@ func (v *ChainX) ValidateAddress(addr string, network NetworkType) *Result {
 		return &Result{Success, false, Unknown, ""}
 	}
 	ss58AddrType := decoded[0]
-	if ss58AddrType != v.Addr
+	if ss58AddrType != v.AddressType() {
+		return &Result{Success, false, Unknown, ""}
+	}
+
+	checksum := decoded[dataLen-v.ChecksumLen():]
+	payload := decoded[1 : dataLen-v.Check
