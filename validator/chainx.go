@@ -16,4 +16,10 @@ var _ SS58 = (*ChainX)(nil)
 // see: https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)
 func (v *ChainX) ValidateAddress(addr string, network NetworkType) *Result {
 	decoded := base58check.BitcoinEncoder.Decode(addr)
-	dataLen := len(
+	dataLen := len(decoded)
+	// 1 byte type + 3 bytes address format
+	if dataLen < 4 {
+		return &Result{Success, false, Unknown, ""}
+	}
+	ss58AddrType := decoded[0]
+	if ss58AddrType != v.Addr
