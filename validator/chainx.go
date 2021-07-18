@@ -10,4 +10,7 @@ import (
 // ChainX ...
 type ChainX struct{}
 
-var _ SS58 = 
+var _ SS58 = (*ChainX)(nil)
+
+// ValidateAddress returns validate result of aeternity address
+// see: https://github.com/paritytech/substrate/wiki/External-Address-F
