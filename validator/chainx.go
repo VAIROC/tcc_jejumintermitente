@@ -27,4 +27,8 @@ func (v *ChainX) ValidateAddress(addr string, network NetworkType) *Result {
 	}
 
 	checksum := decoded[dataLen-v.ChecksumLen():]
-	payload := decoded[1 : dataLen-v.Check
+	payload := decoded[1 : dataLen-v.ChecksumLen()]
+
+	expectedChecksum := v.CalcChecksum(payload)
+	if bytes.Compare(checksum, expectedChecksum) == 0 {
+		return &Result{Success, true, Nor
