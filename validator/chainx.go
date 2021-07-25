@@ -31,4 +31,15 @@ func (v *ChainX) ValidateAddress(addr string, network NetworkType) *Result {
 
 	expectedChecksum := v.CalcChecksum(payload)
 	if bytes.Compare(checksum, expectedChecksum) == 0 {
-		return &Result{Success, true, Nor
+		return &Result{Success, true, Normal, ""}
+	}
+	return &Result{Success, false, Unknown, ""}
+}
+
+// AddressType ...
+func (v *ChainX) AddressType() byte {
+	return 44
+}
+
+// AccountIdxLen ...
+func (v *ChainX) AccountIdxLen(
