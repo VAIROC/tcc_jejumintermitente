@@ -52,4 +52,9 @@ func (v *ChainX) ChecksumLen() int {
 }
 
 // CalcChecksum ...
-func (v *ChainX) CalcChecksum(payload []byte) []byte 
+func (v *ChainX) CalcChecksum(payload []byte) []byte {
+	input := []byte("SS58PRE")
+	input = append(input, v.AddressType())
+	input = append(input, payload...)
+	return crypto.Blake2b512(input)[:v.ChecksumLen()]
+}
