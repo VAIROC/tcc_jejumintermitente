@@ -42,4 +42,14 @@ func (v *ChainX) AddressType() byte {
 }
 
 // AccountIdxLen ...
-func (v *ChainX) AccountIdxLen(
+func (v *ChainX) AccountIdxLen() int {
+	return 32
+}
+
+// ChecksumLen ...
+func (v *ChainX) ChecksumLen() int {
+	return 2
+}
+
+// CalcChecksum ...
+func (v *ChainX) CalcChecksum(payload []byte) []byte 
