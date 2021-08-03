@@ -8,4 +8,8 @@ import (
 )
 
 func TestChainXValidateAddress(t *testing.T) {
-	validator := &Cha
+	validator := &ChainX{}
+
+	var validCases = map[string]*Result{
+		"5QxFTz6oeBbgPtGMg531zUZ4JJz2RkbiCjkUu9z1Uf7Wi92d": {Success, true, Normal, ""},
+		"5SdW3TbRpnsbvTDa9QDXftM8mt
