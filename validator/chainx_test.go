@@ -16,4 +16,8 @@ func TestChainXValidateAddress(t *testing.T) {
 		"5QbeyxMUMhEeukBaxAqHip9E1u93kMqxf2dTBPDrPeY52B9o": {Success, true, Normal, ""},
 		"5R7sxzEYGGSGSCQd3DQLyYwkA29jYGYaecHUHCsQ8s1Vxeo7": {Success, true, Normal, ""},
 		"5VQLcbTNn6UPYqLK87kPBHQvhvYL24z9bCa9XBtkkWekGrwj": {Success, true, Normal, ""},
-		"5UBLKqQ7e
+		"5UBLKqQ7efPHxwVQCT82Vf86PxsDRCRv8nVZZQ9YpUrkg25M": {Success, true, Normal, ""},
+	}
+
+	for addr, result := range validCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateA
