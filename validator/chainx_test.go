@@ -24,4 +24,6 @@ func TestChainXValidateAddress(t *testing.T) {
 	}
 
 	var invalidCases = map[string]*Result{
-		"15SdW3TbRpnsbvTDa9QDXftM8mtdw86ou8Z1Ly3D4XgjSEii":  {Success, 
+		"15SdW3TbRpnsbvTDa9QDXftM8mtdw86ou8Z1Ly3D4XgjSEii":  {Success, false, Unknown, ""},
+		"15j4dg5GzsL1bw2U2AWgeyAk6QTxq43V7ZPbXdAmbVLjvDCK":  {Success, false, Unknown, ""},
+		"6VQLcbTNn6UPYqLK87kPBHQvhvYL24z9bCa9XBtkkWekGrwj":  {Su
