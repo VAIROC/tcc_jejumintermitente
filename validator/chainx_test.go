@@ -20,4 +20,8 @@ func TestChainXValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range validCases {
-		assert.True(t, reflect.DeepEqual(validator.ValidateA
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+
+	var invalidCases = map[string]*Result{
+		"15SdW3TbRpnsbvTDa9QDXftM8mtdw86ou8Z1Ly3D4XgjSEii":  {Success, 
