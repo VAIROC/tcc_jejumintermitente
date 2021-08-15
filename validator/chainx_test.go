@@ -28,4 +28,7 @@ func TestChainXValidateAddress(t *testing.T) {
 		"15j4dg5GzsL1bw2U2AWgeyAk6QTxq43V7ZPbXdAmbVLjvDCK":  {Success, false, Unknown, ""},
 		"6VQLcbTNn6UPYqLK87kPBHQvhvYL24z9bCa9XBtkkWekGrwj":  {Success, false, Unknown, ""},
 		"5VQLcbTNn6UPYqLK87kPBHQvhvYL24z9bCa9XBtkkWekGewj":  {Success, false, Unknown, ""},
-		"5VQLcbTNn6UPYqLK87kPBHQvhvML24z9bCa9XBtkkWekGrwj ": {
+		"5VQLcbTNn6UPYqLK87kPBHQvhvML24z9bCa9XBtkkWekGrwj ": {Success, false, Unknown, ""},
+		"bc1q3l9k4lm5z4mtsl6smmj9qxy03e65x3maz4p9xv":        {Success, false, Unknown, ""},
+		"abcde": {Success, false, Unknown, ""},
+		"":   
