@@ -7,4 +7,10 @@ import (
 	"github.com/LanfordCai/ava/cashaddr"
 )
 
-// Class
+// Classzz ...
+type Classzz struct{}
+
+var _ BitcoinLike = (*Classzz)(nil)
+var _ CashAddress = (*Classzz)(nil)
+
+// ValidateAddress returns validate result of
