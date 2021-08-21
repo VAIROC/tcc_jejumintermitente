@@ -38,3 +38,9 @@ func (v *CKB) ValidateAddress(addr string, network NetworkType) *Result {
 }
 
 // AddressHrp returns hrps of ckb according to the network
+func (v *CKB) AddressHrp(network NetworkType) string {
+	if network == Mainnet {
+		return "ckb"
+	}
+	return "ckt"
+}
