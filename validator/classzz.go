@@ -13,4 +13,6 @@ type Classzz struct{}
 var _ BitcoinLike = (*Classzz)(nil)
 var _ CashAddress = (*Classzz)(nil)
 
-// ValidateAddress returns validate result of
+// ValidateAddress returns validate result of classzz address
+func (v *Classzz) ValidateAddress(addr string, network NetworkType) *Result {
+	if addrType := v.CashAddrType(addr, network);
