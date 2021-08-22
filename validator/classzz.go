@@ -22,4 +22,7 @@ func (v *Classzz) ValidateAddress(addr string, network NetworkType) *Result {
 	return &Result{Success, false, Unknown, ""}
 }
 
-// AddressVersion returns classzz addres
+// AddressVersion returns classzz address version according to the address type and
+// network type
+func (v *Classzz) AddressVersion(addrType AddressType, network NetworkType) byte {
+	if network == Testnet || addrType
