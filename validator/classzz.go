@@ -40,4 +40,13 @@ func (v *Classzz) CashAddrType(addr string, network NetworkType) AddressType {
 	}
 
 	if !strings.HasPrefix(addr, "classzz:") {
-		addr = fmt
+		addr = fmt.Sprintf("%s:%s", "classzz", addr)
+	}
+
+	legacyAddr, err := cashaddr.ToLegacyAddr(addr)
+	// if not cashaddr
+	if err != nil {
+		return Unknown
+	}
+
+	addrType := Normal
