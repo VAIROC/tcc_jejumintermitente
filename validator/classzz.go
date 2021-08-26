@@ -34,4 +34,10 @@ func (v *Classzz) AddressVersion(addrType AddressType, network NetworkType) byte
 
 // CashAddrType ...
 // NOTE: only support CashAddrP2PKH
-func (v *Classzz) CashAddrType(addr string, 
+func (v *Classzz) CashAddrType(addr string, network NetworkType) AddressType {
+	if network == Testnet {
+		panic(ErrUnsupported.Error())
+	}
+
+	if !strings.HasPrefix(addr, "classzz:") {
+		addr = fmt
