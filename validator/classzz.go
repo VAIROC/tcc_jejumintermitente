@@ -49,4 +49,10 @@ func (v *Classzz) CashAddrType(addr string, network NetworkType) AddressType {
 		return Unknown
 	}
 
-	addrType := Normal
+	addrType := NormalAddrType(v, legacyAddr, network)
+
+	if addrType == P2PKH {
+		return CashAddrP2PKH
+	}
+	return Unknown
+}
