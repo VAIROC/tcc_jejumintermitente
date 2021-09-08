@@ -18,4 +18,8 @@ func TestClasszzValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range mainnetCases {
-		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), r
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+
+	var invalidCases = map[string]*Result{
+		"CP2XXD7Q5WZJXKJMVY6JSHH2RZ3EQ5SJEY7JA09MWX":             {Success, false, Unknown, ""
