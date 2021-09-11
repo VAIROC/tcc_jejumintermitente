@@ -24,4 +24,6 @@ func TestClasszzValidateAddress(t *testing.T) {
 	var invalidCases = map[string]*Result{
 		"CP2XXD7Q5WZJXKJMVY6JSHH2RZ3EQ5SJEY7JA09MWX":             {Success, false, Unknown, ""},
 		"qzy9dedpwm53cqgcr2e3z9qy788cca6y0ce8mfkezh":             {Success, false, Unknown, ""},
-		"bitcoincash:qzy9dedpwm53cqgcr2e3z9qy788cca6
+		"bitcoincash:qzy9dedpwm53cqgcr2e3z9qy788cca6y0ce8mfkezh": {Success, false, Unknown, ""},
+		"clbsszz:cp2ts8jxwwadkc3dgqp08uk29tcmqvsjzsh7jevgfm":     {Success, false, Unknown, ""},
+		"cp2xxd3q5wz
