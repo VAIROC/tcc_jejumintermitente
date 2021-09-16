@@ -26,4 +26,6 @@ func TestClasszzValidateAddress(t *testing.T) {
 		"qzy9dedpwm53cqgcr2e3z9qy788cca6y0ce8mfkezh":             {Success, false, Unknown, ""},
 		"bitcoincash:qzy9dedpwm53cqgcr2e3z9qy788cca6y0ce8mfkezh": {Success, false, Unknown, ""},
 		"clbsszz:cp2ts8jxwwadkc3dgqp08uk29tcmqvsjzsh7jevgfm":     {Success, false, Unknown, ""},
-		"cp2xxd3q5wz
+		"cp2xxd3q5wzjxkjmvy6jshh2rz3eq5sjey7ja09mwx":             {Success, false, Unknown, ""},
+		"cp283r0gjwd7lre962r32prfyhqz0l0l6shwmzn7st ":            {Success, false, Unknown, ""},
+	
