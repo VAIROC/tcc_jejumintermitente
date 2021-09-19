@@ -28,4 +28,5 @@ func TestClasszzValidateAddress(t *testing.T) {
 		"clbsszz:cp2ts8jxwwadkc3dgqp08uk29tcmqvsjzsh7jevgfm":     {Success, false, Unknown, ""},
 		"cp2xxd3q5wzjxkjmvy6jshh2rz3eq5sjey7ja09mwx":             {Success, false, Unknown, ""},
 		"cp283r0gjwd7lre962r32prfyhqz0l0l6shwmzn7st ":            {Success, false, Unknown, ""},
-	
+		"tb1qp0we5epypgj4acd2c4au58045ruud2pd6heuee":             {Success, false, Unknown, ""},
+		"tb1q63svxth22j5r73rc8xth74n5uu69n7vc0um98f":             {Success, false
