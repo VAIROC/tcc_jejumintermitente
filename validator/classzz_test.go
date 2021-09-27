@@ -35,4 +35,6 @@ func TestClasszzValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range invalidCases {
-		assert.True(t, reflect.DeepEq
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+}
