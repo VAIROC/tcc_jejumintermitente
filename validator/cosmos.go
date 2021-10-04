@@ -12,4 +12,12 @@ func (v *Cosmos) ValidateAddress(addr string, network NetworkType) *Result {
 		return &Result{Success, true, Normal, ""}
 	}
 
-	r
+	return &Result{Success, false, Unknown, ""}
+}
+
+// AddressHrp returns hrp of cosmos according to the network
+func (v *Cosmos) AddressHrp() string {
+	return "cosmos"
+}
+
+// Bech3
