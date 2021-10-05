@@ -20,4 +20,7 @@ func (v *Cosmos) AddressHrp() string {
 	return "cosmos"
 }
 
-// Bech3
+// Bech32ProgramLength returns program length of bytom
+func (v *Cosmos) Bech32ProgramLength() int {
+	return 20
+}
