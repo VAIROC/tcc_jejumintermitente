@@ -15,4 +15,9 @@ func (v *Dash) ValidateAddress(addr string, network NetworkType) *Result {
 }
 
 // AddressVersion returns dash address version according to the address type and
-// networ
+// network type
+func (v *Dash) AddressVersion(addrType AddressType, network NetworkType) byte {
+	if network == Mainnet {
+		if addrType == P2PKH {
+			return 76
+		}
