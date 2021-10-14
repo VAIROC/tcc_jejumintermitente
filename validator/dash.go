@@ -21,3 +21,11 @@ func (v *Dash) AddressVersion(addrType AddressType, network NetworkType) byte {
 		if addrType == P2PKH {
 			return 76
 		}
+		return 16
+	}
+
+	if addrType == P2PKH {
+		return 140
+	}
+	return 19
+}
