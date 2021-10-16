@@ -24,4 +24,7 @@ func TestDashValidateAddress(t *testing.T) {
 
 	var testnetCases = map[string]*Result{
 		"yYmrsYP3XYMZr1cGtha3QzmuNB1C7CfyhV": {Success, true, P2PKH, ""},
-		"yQgGqVdasi5jGfweJ84HJz4qp4ac5G2gxG": {Success, tru
+		"yQgGqVdasi5jGfweJ84HJz4qp4ac5G2gxG": {Success, true, P2PKH, ""},
+		"yUr7iXCNWDpF96W2kurtgszsrjf1XjDaUh": {Success, true, P2PKH, ""},
+		"8oxdi3uiMFJ8SEob6qW76YBgg5en4352Cc": {Success, true, P2SH, ""},
+	
