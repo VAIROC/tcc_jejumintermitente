@@ -27,4 +27,8 @@ func TestDashValidateAddress(t *testing.T) {
 		"yQgGqVdasi5jGfweJ84HJz4qp4ac5G2gxG": {Success, true, P2PKH, ""},
 		"yUr7iXCNWDpF96W2kurtgszsrjf1XjDaUh": {Success, true, P2PKH, ""},
 		"8oxdi3uiMFJ8SEob6qW76YBgg5en4352Cc": {Success, true, P2SH, ""},
-	
+		"92WthWvUyvzcJokeo3tyNgNZqzYmhbHM8N": {Success, true, P2SH, ""},
+	}
+
+	for addr, result := range testnetCases {
+		assert.True(t, reflect.DeepEqual(valida
