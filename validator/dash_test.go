@@ -20,3 +20,8 @@ func TestDashValidateAddress(t *testing.T) {
 	for addr, result := range mainnetCases {
 		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
 		assert.False(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
+	}
+
+	var testnetCases = map[string]*Result{
+		"yYmrsYP3XYMZr1cGtha3QzmuNB1C7CfyhV": {Success, true, P2PKH, ""},
+		"yQgGqVdasi5jGfweJ84HJz4qp4ac5G2gxG": {Success, tru
