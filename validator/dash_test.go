@@ -41,4 +41,9 @@ func TestDashValidateAddress(t *testing.T) {
 		"Xdk9TLNreLrM4jpu6m15zZvurG66sZKi6C":  {Success, false, Unknown, ""},
 		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854 ": {Success, false, Unknown, ""},
 		"GEzKoZ59mhmpMzjNBWNoYKvLhFLAdHuL6P":  {Success, false, Unknown, ""},
-		"abcde":                               {Success, false, U
+		"abcde":                               {Success, false, Unknown, ""},
+		"":                                    {Success, false, Unknown, ""},
+	}
+
+	for addr, result := range invalidCases {
+		assert.
