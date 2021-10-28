@@ -46,4 +46,6 @@ func TestDashValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range invalidCases {
-		assert.
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+}
