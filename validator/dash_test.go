@@ -37,4 +37,6 @@ func TestDashValidateAddress(t *testing.T) {
 
 	var invalidCases = map[string]*Result{
 		"yYrsYP3XYMZr1cGtha3QzmuNB1C7CfyhV":   {Success, false, Unknown, ""},
-		"7Z5BvydGVzgbX9xqWEb1JtF9TkToG8htcv":  {Succ
+		"7Z5BvydGVzgbX9xqWEb1JtF9TkToG8htcv":  {Success, false, Unknown, ""},
+		"Xdk9TLNreLrM4jpu6m15zZvurG66sZKi6C":  {Success, false, Unknown, ""},
+		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854 ": {Success, fal
