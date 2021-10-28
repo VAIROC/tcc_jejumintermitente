@@ -39,4 +39,6 @@ func TestDashValidateAddress(t *testing.T) {
 		"yYrsYP3XYMZr1cGtha3QzmuNB1C7CfyhV":   {Success, false, Unknown, ""},
 		"7Z5BvydGVzgbX9xqWEb1JtF9TkToG8htcv":  {Success, false, Unknown, ""},
 		"Xdk9TLNreLrM4jpu6m15zZvurG66sZKi6C":  {Success, false, Unknown, ""},
-		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854 ": {Success, fal
+		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854 ": {Success, false, Unknown, ""},
+		"GEzKoZ59mhmpMzjNBWNoYKvLhFLAdHuL6P":  {Success, false, Unknown, ""},
+		"abcde":                               {Success, false, U
