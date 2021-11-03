@@ -23,4 +23,7 @@ func TestDogecoinValidateAddress(t *testing.T) {
 	}
 
 	var testnetCases = map[string]*Result{
-		"nYF8DkhE3orcq7CypP1oEQTWWcG1yYkqec":  {Succes
+		"nYF8DkhE3orcq7CypP1oEQTWWcG1yYkqec":  {Success, true, P2PKH, ""},
+		"nXiLZ1g1xrcLwYq1s9wVCdiewLeY7Bw1X3":  {Success, true, P2PKH, ""},
+		"nj4xWxERcYpXQLZf61R5xzMDfTjv72ajJh":  {Success, true, P2PKH, ""},
+		"2NDutUP
