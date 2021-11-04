@@ -36,4 +36,5 @@ func TestDogecoinValidateAddress(t *testing.T) {
 	}
 
 	var invalidCases = map[string]*Result{
-		"36T5s5B1Saja
+		"36T5s5B1Saja9yAJWxQN8SNXvNzxaoFdcy":                             {Success, false, Unknown, ""},
+		"DFwtUPqF3ornMxgs6gt6A3Rpcuwizzsnee":                        
