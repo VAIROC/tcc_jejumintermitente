@@ -30,4 +30,6 @@ func TestDogecoinValidateAddress(t *testing.T) {
 		"2MwU3UtzeHG59xV7J7VSoM42U7qwCJ1GSJz": {Success, true, P2SH, ""},
 	}
 
-	for addr, re
+	for addr, result := range testnetCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
+		assert.False
