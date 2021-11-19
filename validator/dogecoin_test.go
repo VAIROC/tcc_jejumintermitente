@@ -40,4 +40,6 @@ func TestDogecoinValidateAddress(t *testing.T) {
 		"DFwtUPqF3ornMxgs6gt6A3Rpcuwizzsnee":                             {Success, false, Unknown, ""},
 		"1NQhfItWRwU6zg5G58TfQibHyJEuo6ZYXw":                             {Success, false, Unknown, ""},
 		"QN3WBNpL3ZVj5PwQhSTPYZdrR7QXiKttChN":                            {Success, false, Unknown, ""},
-		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854 ":                            {Suc
+		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854 ":                            {Success, false, Unknown, ""},
+		"GEzKoZ59mhmpMzjNBWNoYKvLhFLAdHuL6P":                             {Success, false, Unknown, ""},
+		"bc1qwqdg6squsna38e46795at95yu
