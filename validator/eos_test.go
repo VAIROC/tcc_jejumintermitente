@@ -17,4 +17,12 @@ func TestEOSIsAddressFormatValid(t *testing.T) {
 		"zbeosbp11111",
 		"eoshuobipool",
 		"big.one",
-		"okcap
+		"okcapitalbp1",
+	}
+
+	for _, addr := range validCases {
+		assert.True(t, validator.IsAddressFormatValid(addr, Mainnet), addr)
+	}
+
+	var invalidCases = []string{
+		"1YURb
