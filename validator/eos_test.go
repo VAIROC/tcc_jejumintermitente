@@ -7,4 +7,14 @@ import (
 )
 
 func TestEOSIsAddressFormatValid(t *testing.T) {
-	valid
+	validator := &EOS{}
+
+	var validCases = []string{
+		"eosnationftw",
+		"atticlabeosb",
+		"helloeoscnbp",
+		"eosasia11111",
+		"zbeosbp11111",
+		"eoshuobipool",
+		"big.one",
+		"okcap
