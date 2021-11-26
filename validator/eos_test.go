@@ -25,4 +25,7 @@ func TestEOSIsAddressFormatValid(t *testing.T) {
 	}
 
 	var invalidCases = []string{
-		"1YURb
+		"1YURbVuocZZZPi8LPU6GfAcKShYY7hLXbrG75v9zBXbS2zaqaHfSmGJvNEZwU3oETNZdPNxqLwR5C",
+		"EOS4xXY8vZU1VGiggW5Qn7AhFcp5ti8vnWe9TVt8nUy1sUdFrLVUC",
+		"eosnationft0",
+		"
