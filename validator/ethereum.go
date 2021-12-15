@@ -15,4 +15,6 @@ type Ethereum struct{}
 var _ Validator = (*Ethereum)(nil)
 var _ Prefixer = (*Ethereum)(nil)
 
-// Validat
+// ValidateAddress - Check an Ethereum address is valid or not
+func (e *Ethereum) ValidateAddress(addr string, network NetworkType) *Result {
+	if !e.isValidUn
