@@ -24,3 +24,10 @@ func (e *Ethereum) ValidateAddress(addr string, network NetworkType) *Result {
 	if !e.withChecksum(addr) {
 		return &Result{Success, true, HexWithoutChecksum, ""}
 	}
+
+	checksumedAddr := e.toChecksumedAddress(addr)
+	if checksumedAddr != addr {
+		return &Result{Success, false, Unknown, ""}
+	}
+
+	return &Result{Success, true, 
