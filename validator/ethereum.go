@@ -40,4 +40,8 @@ func (e *Ethereum) withChecksum(addr string) bool {
 		(strings.ToLower(noPrefixAddr) != noPrefixAddr)
 }
 
-func (e *Ethereum) isValidUnche
+func (e *Ethereum) isValidUncheckedAddress(addr string) bool {
+	if e.GetPrefix(Mainnet) != "0x" || len(addr) != 42 {
+		return false
+	}
+	address := strings.ToLower(AddressWithoutPrefix(e, addr, Mai
