@@ -34,4 +34,10 @@ func (e *Ethereum) ValidateAddress(addr string, network NetworkType) *Result {
 }
 
 func (e *Ethereum) withChecksum(addr string) bool {
-	noPrefixAddr := AddressWithoutPrefix(e, addr, Mainnet
+	noPrefixAddr := AddressWithoutPrefix(e, addr, Mainnet)
+
+	return (strings.ToUpper(noPrefixAddr) != noPrefixAddr) &&
+		(strings.ToLower(noPrefixAddr) != noPrefixAddr)
+}
+
+func (e *Ethereum) isValidUnche
