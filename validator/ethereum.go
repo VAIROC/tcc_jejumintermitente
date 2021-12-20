@@ -30,4 +30,8 @@ func (e *Ethereum) ValidateAddress(addr string, network NetworkType) *Result {
 		return &Result{Success, false, Unknown, ""}
 	}
 
-	return &Result{Success, true, 
+	return &Result{Success, true, HexWithChecksum, ""}
+}
+
+func (e *Ethereum) withChecksum(addr string) bool {
+	noPrefixAddr := AddressWithoutPrefix(e, addr, Mainnet
