@@ -44,4 +44,11 @@ func (e *Ethereum) isValidUncheckedAddress(addr string) bool {
 	if e.GetPrefix(Mainnet) != "0x" || len(addr) != 42 {
 		return false
 	}
-	address := strings.ToLower(AddressWithoutPrefix(e, addr, Mai
+	address := strings.ToLower(AddressWithoutPrefix(e, addr, Mainnet))
+	if _, err := hex.DecodeString(address); err != nil {
+		return false
+	}
+	return true
+}
+
+func (e *Ethereum) toChecksumedAddress(addr string) string
