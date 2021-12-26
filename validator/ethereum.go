@@ -51,4 +51,6 @@ func (e *Ethereum) isValidUncheckedAddress(addr string) bool {
 	return true
 }
 
-func (e *Ethereum) toChecksumedAddress(addr string) string
+func (e *Ethereum) toChecksumedAddress(addr string) string {
+	normalizedAddr := strings.ToLower(AddressWithoutPrefix(e, addr, Mainnet))
+	hash := hex.EncodeToString(crypto.Keccak256([]byte(normalize
