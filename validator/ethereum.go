@@ -57,4 +57,15 @@ func (e *Ethereum) toChecksumedAddress(addr string) string {
 	var checksumAddrBuf bytes.Buffer
 	for i, r := range normalizedAddr {
 		if hash[i] >= '8' {
-			checksumAddrBuf.Write([]byte{byte(unicode.ToUppe
+			checksumAddrBuf.Write([]byte{byte(unicode.ToUpper(r))})
+		} else {
+			checksumAddrBuf.Write([]byte{byte(r)})
+		}
+	}
+
+	result := e.GetPrefix(Mainnet) + checksumAddrBuf.String()
+	return result
+}
+
+// GetPrefix ...
+func (e *Ethereu
