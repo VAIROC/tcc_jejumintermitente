@@ -68,4 +68,6 @@ func (e *Ethereum) toChecksumedAddress(addr string) string {
 }
 
 // GetPrefix ...
-func (e *Ethereu
+func (e *Ethereum) GetPrefix(network NetworkType) string {
+	return "0x"
+}
