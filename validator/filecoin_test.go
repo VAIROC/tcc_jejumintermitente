@@ -13,3 +13,7 @@ func TestFilecoinValidateAddress(t *testing.T) {
 	var mainnetCases = map[string]*Result{
 		"f00":      {Success, true, FilID, ""},
 		"f01":      {Success, true, FilID, ""},
+		"f010":     {Success, true, FilID, ""},
+		"f0150":    {Success, true, FilID, ""},
+		"f0499":    {Success, true, FilID, ""},
+		"f01024":   {Success, true, Fi
