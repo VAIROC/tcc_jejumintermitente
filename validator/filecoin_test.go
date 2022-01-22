@@ -24,4 +24,5 @@ func TestFilecoinValidateAddress(t *testing.T) {
 		"f1wbxhu3ypkuo6eyp6hjx6davuelxaxrvwb2kuwva":                                              {Success, true, FilSecp256k1, ""},
 		"f1xtwapqc6nh4si2hcwpr3656iotzmlwumogqbuaa":                                              {Success, true, FilSecp256k1, ""},
 		"f1xcbgdhkgkwht3hrrnui3jdopeejsoatkzmoltqy":                                              {Success, true, FilSecp256k1, ""},
-		"f17uoq6tp427uzv7fztkbsnn64iwotfrristwpryy":                  
+		"f17uoq6tp427uzv7fztkbsnn64iwotfrristwpryy":                                              {Success, true, FilSecp256k1, ""},
+		"f24vg6ut43yw2h2jqydgbg2xq7x6f4kub3bg6as6i":                                              {S
