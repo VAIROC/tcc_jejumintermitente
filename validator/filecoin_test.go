@@ -42,4 +42,8 @@ func TestFilecoinValidateAddress(t *testing.T) {
 		assert.False(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
 	}
 
-	var testnetCases = map[st
+	var testnetCases = map[string]*Result{
+		"t00":      {Success, true, FilID, ""},
+		"t01":      {Success, true, FilID, ""},
+		"t010":     {Success, true, FilID, ""},
+		"t0150":    {Success,
