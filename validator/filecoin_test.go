@@ -50,4 +50,6 @@ func TestFilecoinValidateAddress(t *testing.T) {
 		"t0499":    {Success, true, FilID, ""},
 		"t01024":   {Success, true, FilID, ""},
 		"t01729":   {Success, true, FilID, ""},
-		"t0999999
+		"t0999999": {Success, true, FilID, ""},
+		"t15ihq5ibzwki2b4ep2f46avlkrqzhpqgtga7pdrq":                                              {Success, true, FilSecp256k1, ""},
+		"t12fiakb
