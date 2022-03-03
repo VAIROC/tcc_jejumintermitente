@@ -75,4 +75,6 @@ func TestFilecoinValidateAddress(t *testing.T) {
 	}
 
 	var invalidCases = map[string]*Result{
-		"Q2gfvuyh7v2sx3patm5k23wdzmh
+		"Q2gfvuyh7v2sx3patm5k23wdzmhyhtmqctasbr23y": {Success, false, Unknown, ""},
+		"t4gfvuyh7v2sx3patm5k23wdzmhyhtmqctasbr23y": {Success, false, Unknown, ""},
+		"t2gfvuyh7v2sx3patm5k23wdzmh
