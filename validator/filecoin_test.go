@@ -96,4 +96,6 @@ func TestFilecoinValidateAddress(t *testing.T) {
 		"":      {Success, false, Unknown, ""},
 	}
 
-	for addr, res
+	for addr, result := range invalidCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+		assert.Tru
