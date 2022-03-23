@@ -87,4 +87,6 @@ func TestFilecoinValidateAddress(t *testing.T) {
 		"f4gfvuyh7v2sx3patm5k23wdzmhyhtmqctasbr23y": {Success, false, Unknown, ""},
 		"f2gfvuyh7v2sx3patm5k23wdzmhyhtmqctasbr24y": {Success, false, Unknown, ""},
 		"f0banananananannnnnnnnn":                   {Success, false, Unknown, ""},
-		"f0banananananannnnnnnn ":                   {Success, false, Unknow
+		"f0banananananannnnnnnn ":                   {Success, false, Unknown, ""},
+		"f2gfvuyh7v2sx3patm1k23wdzmhyhtmqctasbr24y": {Success, false, Unknown, ""},
+		"f2gfvuyh7v2sx3paTm1k23wdzmhyhtmqctasbr24y": {Success, false, Unknown, ""},
