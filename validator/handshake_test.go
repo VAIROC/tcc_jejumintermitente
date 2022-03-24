@@ -11,4 +11,6 @@ import (
 func TestHandshakeValidateAddress(t *testing.T) {
 	validator := &Handshake{}
 
-	
+	var mainnetCases = map[string]*Result{
+		"hs1qlu2nssfkjt782tg2tsnrw0cus9q6we87nj32me": {Success, true, P2WPKH, ""},
+		"hs1q7z8p2jzg3sfxuttf5sjxxzlxg3rf3mte8a38aw": {Su
