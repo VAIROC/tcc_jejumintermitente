@@ -2,4 +2,13 @@ package validator
 
 import (
 	"reflect"
-	"te
+	"testing"
+
+	"github.com/stretchr/testify/assert"
+)
+
+// TODO: testnet and P2WSH cases
+func TestHandshakeValidateAddress(t *testing.T) {
+	validator := &Handshake{}
+
+	
