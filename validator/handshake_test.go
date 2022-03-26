@@ -13,4 +13,9 @@ func TestHandshakeValidateAddress(t *testing.T) {
 
 	var mainnetCases = map[string]*Result{
 		"hs1qlu2nssfkjt782tg2tsnrw0cus9q6we87nj32me": {Success, true, P2WPKH, ""},
-		"hs1q7z8p2jzg3sfxuttf5sjxxzlxg3rf3mte8a38aw": {Su
+		"hs1q7z8p2jzg3sfxuttf5sjxxzlxg3rf3mte8a38aw": {Success, true, P2WPKH, ""},
+	}
+
+	for addr, result := range mainnetCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+		a
