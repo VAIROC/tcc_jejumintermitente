@@ -24,4 +24,5 @@ func TestHandshakeValidateAddress(t *testing.T) {
 	var invalidCases = map[string]*Result{
 		"hs1qlu2nssfkjt782tg2tsnrw0cus9q6we87nj32m":                      {Success, false, Unknown, ""},
 		"hs2qlu2nssfkjt782tg2tsnrw0cus9q6we87nj32me":                     {Success, false, Unknown, ""},
-		"
+		"fs1qlu2nssfkjt782tg2tsnrw0cus9q6we87nj32me":                     {Success, false, Unknown, ""},
+		"tm1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0
