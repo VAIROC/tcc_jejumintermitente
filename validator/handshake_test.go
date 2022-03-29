@@ -25,4 +25,9 @@ func TestHandshakeValidateAddress(t *testing.T) {
 		"hs1qlu2nssfkjt782tg2tsnrw0cus9q6we87nj32m":                      {Success, false, Unknown, ""},
 		"hs2qlu2nssfkjt782tg2tsnrw0cus9q6we87nj32me":                     {Success, false, Unknown, ""},
 		"fs1qlu2nssfkjt782tg2tsnrw0cus9q6we87nj32me":                     {Success, false, Unknown, ""},
-		"tm1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0
+		"tm1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0gdcccefvpysxf3pjxtptv": {Success, false, Unknown, ""},
+		"abcde": {Success, false, Unknown, ""},
+		"":      {Success, false, Unknown, ""},
+	}
+
+	for addr, result := 
