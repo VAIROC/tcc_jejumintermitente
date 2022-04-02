@@ -23,4 +23,11 @@ func (e *IOST) ValidateAddress(addr string, network NetworkType) *Result {
 	}
 
 	if addrType == Unknown {
-		
+		return &Result{Success, false, Unknown, ""}
+	}
+
+	return &Result{Success, true, addrType, ""}
+}
+
+// IsAddressFormatValid ...
+func (e *IOST) IsAddres
