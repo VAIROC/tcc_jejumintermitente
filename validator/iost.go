@@ -30,4 +30,7 @@ func (e *IOST) ValidateAddress(addr string, network NetworkType) *Result {
 }
 
 // IsAddressFormatValid ...
-func (e *IOST) IsAddres
+func (e *IOST) IsAddressFormatValid(addr string, network NetworkType) bool {
+	re := regexp.MustCompile(`\A[a-z0-9_]{5,11}\z`)
+	return re.MatchString(addr)
+}
