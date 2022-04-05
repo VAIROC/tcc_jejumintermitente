@@ -11,4 +11,8 @@ import (
 )
 
 func TestIOSTValidateAddress(t *testing.T) {
-	client := IOSTClient{Endpoint
+	client := IOSTClient{Endpoint: os.Getenv("AVA_IOST_ENDPOINT")}
+	validator := &IOST{Client: &client}
+
+	var mainnetCases = map[string]*Result{
+		"k
