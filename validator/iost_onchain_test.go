@@ -15,4 +15,9 @@ func TestIOSTValidateAddress(t *testing.T) {
 	validator := &IOST{Client: &client}
 
 	var mainnetCases = map[string]*Result{
-		"k
+		"kainiost":    {Success, true, Normal, ""},
+		"_iost":       {Success, true, Normal, ""},
+		"13177913280": {Success, true, Normal, ""},
+	}
+
+	for addr, result := range mainnet
