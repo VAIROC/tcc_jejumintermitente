@@ -34,4 +34,9 @@ func TestIOSTValidateAddress_Failure(t *testing.T) {
 	}
 
 	for _, addr := range cases {
-		r := validator.Va
+		r := validator.ValidateAddress(addr, Mainnet)
+		assert.Equal(t, Failure, r.Status)
+		assert.False(t, r.IsValid)
+		assert.Equal(t, Unknown, r.Type)
+	}
+}
