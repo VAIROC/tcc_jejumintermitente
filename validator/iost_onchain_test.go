@@ -20,4 +20,9 @@ func TestIOSTValidateAddress(t *testing.T) {
 		"13177913280": {Success, true, Normal, ""},
 	}
 
-	for addr, result := range mainnet
+	for addr, result := range mainnetCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+}
+
+func TestIOSTValidateAddress_Failure(t *testing.T) 
