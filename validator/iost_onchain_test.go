@@ -25,4 +25,13 @@ func TestIOSTValidateAddress(t *testing.T) {
 	}
 }
 
-func TestIOSTValidateAddress_Failure(t *testing.T) 
+func TestIOSTValidateAddress_Failure(t *testing.T) {
+	client := IOSTClient{Endpoint: "https://fakeurl"}
+	validator := &IOST{Client: &client}
+
+	var cases = []string{
+		"huobi_iost",
+	}
+
+	for _, addr := range cases {
+		r := validator.Va
