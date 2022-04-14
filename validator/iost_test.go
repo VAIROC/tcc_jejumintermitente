@@ -19,4 +19,8 @@ func TestIOSTIsAddressFormatValid(t *testing.T) {
 	}
 
 	for _, addr := range validCases {
-		assert.True(t, valida
+		assert.True(t, validator.IsAddressFormatValid(addr, Mainnet), addr)
+	}
+
+	var invalidCases = []string{
+		"1YURbVuocZZZPi8LPU6GfAcKShYY7hLXbrG75v9zBXbS2zaqaHfSmGJvNEZ
