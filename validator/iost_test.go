@@ -23,4 +23,12 @@ func TestIOSTIsAddressFormatValid(t *testing.T) {
 	}
 
 	var invalidCases = []string{
-		"1YURbVuocZZZPi8LPU6GfAcKShYY7hLXbrG75v9zBXbS2zaqaHfSmGJvNEZ
+		"1YURbVuocZZZPi8LPU6GfAcKShYY7hLXbrG75v9zBXbS2zaqaHfSmGJvNEZwU3oETNZdPNxqLwR5C",
+		"IOST4xXY8vZU1VGiggW5Qn7AhFcp5ti8vnWe9TVt8nUy1sUdFrLVUC",
+		"big.one",
+		"huoBI_IOST",
+		"0001 hello",
+		"",
+	}
+
+	for _, addr := range i
