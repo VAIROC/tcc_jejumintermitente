@@ -9,4 +9,11 @@ import (
 	"github.com/LanfordCai/ava/httpclient"
 )
 
-// IOSTClient .
+// IOSTClient ...
+type IOSTClient struct {
+	Endpoint string
+}
+
+// GetAccount ...
+func (c *IOSTClient) GetAccount(addr string) (AddressType, error) {
+	url := fmt.Sprintf("%s/getAccount/%s/false"
