@@ -24,4 +24,8 @@ func (c *IOSTClient) GetAccount(addr string) (AddressType, error) {
 	defer resp.Body.Close()
 
 	if resp.StatusCode > 299 {
-		return Un
+		return Unknown, nil
+	}
+
+	return Normal, nil
+}
