@@ -16,4 +16,8 @@ func TestIrisValidateAddress(t *testing.T) {
 		"iaa1lz9nwk6y5eeafr5c54k5dw8rwje2sj2e5pcqd6": {Success, true, Normal, ""},
 	}
 
-	for 
+	for addr, result := range mainnetCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+
+	var invalidCases = map[str
