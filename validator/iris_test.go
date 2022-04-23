@@ -7,4 +7,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestIri
+func TestIrisValidateAddress(t *testing.T) {
+	validator := &Iris{}
+
+	var mainnetCases = map[string]*Result{
+		"iaa1qjqvwsmqhm6qjgs0qsyhqc3z5f5slctp6efhhw": {Success, true, Norm
