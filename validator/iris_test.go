@@ -22,4 +22,5 @@ func TestIrisValidateAddress(t *testing.T) {
 
 	var invalidCases = map[string]*Result{
 		"iaa1lz9nwk6y3eeafr5c54k5dw8rwje2sj2e5pcqd6":                      {Success, false, Unknown, ""},
-		"baa1lz9nwk6y5eeafr5c54k5dw8rwje2s
+		"baa1lz9nwk6y5eeafr5c54k5dw8rwje2sj2e5pcqd6":                      {Success, false, Unknown, ""},
+		"iaa1rpdhedqrmwtjk4lluqj6m2pvhm544h2vfu2mq8 ":                     {Success, false, Unknown, ""},
