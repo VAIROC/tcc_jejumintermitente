@@ -25,4 +25,6 @@ func TestIrisValidateAddress(t *testing.T) {
 		"baa1lz9nwk6y5eeafr5c54k5dw8rwje2sj2e5pcqd6":                      {Success, false, Unknown, ""},
 		"iaa1rpdhedqrmwtjk4lluqj6m2pvhm544h2vfu2mq8 ":                     {Success, false, Unknown, ""},
 		"cosmos1e4lhppa79t40eqdgl5her60p4zqtenyj839y8z":                   {Success, false, Unknown, ""},
-		"iaa1qjqvwsmqhm6qjgs0qsyhqc3z5f5slctp6efhhdew":               
+		"iaa1qjqvwsmqhm6qjgs0qsyhqc3z5f5slctp6efhhdew":                    {Success, false, Unknown, ""},
+		"iaa1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0gdcccefvpysxf3pjxtptv": {Success, false, Unknown, ""},
+		"
