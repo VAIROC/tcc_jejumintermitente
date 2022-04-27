@@ -27,4 +27,9 @@ func TestIrisValidateAddress(t *testing.T) {
 		"cosmos1e4lhppa79t40eqdgl5her60p4zqtenyj839y8z":                   {Success, false, Unknown, ""},
 		"iaa1qjqvwsmqhm6qjgs0qsyhqc3z5f5slctp6efhhdew":                    {Success, false, Unknown, ""},
 		"iaa1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0gdcccefvpysxf3pjxtptv": {Success, false, Unknown, ""},
-		"
+		"abcde": {Success, false, Unknown, ""},
+		"":      {Success, false, Unknown, ""},
+	}
+
+	for addr, result := range invalidCases {
+		assert.True(t, reflect.De
