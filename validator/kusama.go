@@ -23,4 +23,10 @@ func (v *Kusama) ValidateAddress(addr string, network NetworkType) *Result {
 	}
 	ss58AddrType := decoded[0]
 	if ss58AddrType != v.AddressType() {
-		return &Result{Suc
+		return &Result{Success, false, Unknown, ""}
+	}
+
+	checksum := decoded[dataLen-v.ChecksumLen():]
+	payload := decoded[1 : dataLen-v.ChecksumLen()]
+
+	expectedChecksum := v.CalcChecksum(pa
