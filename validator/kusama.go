@@ -36,4 +36,15 @@ func (v *Kusama) ValidateAddress(addr string, network NetworkType) *Result {
 	return &Result{Success, false, Unknown, ""}
 }
 
-// Ad
+// AddressType ...
+func (v *Kusama) AddressType() byte {
+	return 2
+}
+
+// AccountIdxLen ...
+func (v *Kusama) AccountIdxLen() int {
+	return 32
+}
+
+// ChecksumLen ...
+func (v *Kusa
