@@ -47,4 +47,11 @@ func (v *Kusama) AccountIdxLen() int {
 }
 
 // ChecksumLen ...
-func (v *Kusa
+func (v *Kusama) ChecksumLen() int {
+	return 2
+}
+
+// CalcChecksum ...
+func (v *Kusama) CalcChecksum(payload []byte) []byte {
+	input := []byte("SS58PRE")
+	input = append(input, v.Add
