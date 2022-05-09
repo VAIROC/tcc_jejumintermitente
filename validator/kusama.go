@@ -54,4 +54,7 @@ func (v *Kusama) ChecksumLen() int {
 // CalcChecksum ...
 func (v *Kusama) CalcChecksum(payload []byte) []byte {
 	input := []byte("SS58PRE")
-	input = append(input, v.Add
+	input = append(input, v.AddressType())
+	input = append(input, payload...)
+	return crypto.Blake2b512(input)[:v.ChecksumLen()]
+}
