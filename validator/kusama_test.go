@@ -15,4 +15,8 @@ func TestKusamaValidateAddress(t *testing.T) {
 		"HEVQFCv5HWcwZhzJEX93gQfXikJQ9VgfHoQ9RvXk3KYHN29": {Success, true, Normal, ""},
 		"Ek5FeXtZWxvcS5snsFMdwHZdRnaYvNYRJdBTZMiSur5bde6": {Success, true, Normal, ""},
 		"DYMQA7uvnxayYxcSQywPN7jufwZovBHL48hp747me94aZdG": {Success, true, Normal, ""},
-		"Ho6PiyJXo5paaZJADX3eCQ
+		"Ho6PiyJXo5paaZJADX3eCQUsonyvjdMaU4DJxop1CTHEPFN": {Success, true, Normal, ""},
+		"FfkbFfHRvxsp4Cpr4KMhC4hXEqhd3QrnoeUsWvfsSpTyxnr": {Success, true, Normal, ""},
+	}
+
+	for addr, result := r
