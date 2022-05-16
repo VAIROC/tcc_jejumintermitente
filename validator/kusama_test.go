@@ -19,4 +19,9 @@ func TestKusamaValidateAddress(t *testing.T) {
 		"FfkbFfHRvxsp4Cpr4KMhC4hXEqhd3QrnoeUsWvfsSpTyxnr": {Success, true, Normal, ""},
 	}
 
-	for addr, result := r
+	for addr, result := range validCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+
+	var invalidCases = map[string]*Result{
+		"FfkbFf
