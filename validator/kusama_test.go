@@ -24,4 +24,5 @@ func TestKusamaValidateAddress(t *testing.T) {
 	}
 
 	var invalidCases = map[string]*Result{
-		"FfkbFf
+		"FfkbFfHRvxsp4Cpr4KMhC4hXEqhd3QrnoeUsWvfsSpTyxnG":   {Success, false, Unknown, ""},
+		"16DGiP6jDwAfkAeqGfkUCtheKGUzTy7UeaiFFBAv8BwX3RhN":  {Success, false, Unkn
