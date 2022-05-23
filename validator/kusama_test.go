@@ -29,4 +29,10 @@ func TestKusamaValidateAddress(t *testing.T) {
 		"Ho6PiyJXo5paaZJADX3eCQUsonyvjdMaU4DJxop1C#HEPFN":   {Success, false, Unknown, ""},
 		"Ho6PiyJXo5paaZJADX3eCQUsssonyvjdMaU4DJxop1CTHEPFN": {Success, false, Unknown, ""},
 		"Ho6PiyJXo5paaZJADX3eCQUsonyvjdMaU4DJxop1CTHEPFN ":  {Success, false, Unknown, ""},
-		"bc1q3l9k4lm5z4mtsl6smmj9qxy03e65x3maz4p9xv":        {Su
+		"bc1q3l9k4lm5z4mtsl6smmj9qxy03e65x3maz4p9xv":        {Success, false, Unknown, ""},
+		"abcde": {Success, false, Unknown, ""},
+		"":      {Success, false, Unknown, ""},
+	}
+
+	for addr, result := range invalidCases {
+		assert.True(t, re
