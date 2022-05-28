@@ -35,4 +35,7 @@ func TestKusamaValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range invalidCases {
-		assert.True(t, re
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
+	}
+}
