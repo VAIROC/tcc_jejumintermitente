@@ -16,4 +16,10 @@ func (v *Litecoin) ValidateAddress(addr string, network NetworkType) *Result {
 
 // AddressVersion returns litecoin address version according to the address type and
 // network type
-func (v *Litecoi
+func (v *Litecoin) AddressVersion(addrType AddressType, network NetworkType) byte {
+	if network == Mainnet {
+		if addrType == P2PKH {
+			return 48
+		}
+		return 50
+	
