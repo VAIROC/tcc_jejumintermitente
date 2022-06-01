@@ -11,4 +11,9 @@ func (v *Litecoin) ValidateAddress(addr string, network NetworkType) *Result {
 		return &Result{Success, true, addrType, ""}
 	}
 
-	return &Result{Su
+	return &Result{Success, false, Unknown, ""}
+}
+
+// AddressVersion returns litecoin address version according to the address type and
+// network type
+func (v *Litecoi
