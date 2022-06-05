@@ -22,4 +22,10 @@ func (v *Litecoin) AddressVersion(addrType AddressType, network NetworkType) byt
 			return 48
 		}
 		return 50
-	
+	}
+
+	if addrType == P2PKH {
+		return 111
+	}
+	return 58
+}
