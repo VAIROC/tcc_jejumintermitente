@@ -7,4 +7,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestLitecoinValidateAddr
+func TestLitecoinValidateAddress(t *testing.T) {
+	validator := &Litecoin{}
+
+	var mainnetCases = map[string]*Result{
+		"LUd28DgwFmae8thFhaPYHGVmps4XockqfQ": {Success, true, 
