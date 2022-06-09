@@ -16,4 +16,8 @@ func TestLitecoinValidateAddress(t *testing.T) {
 		"LY1cKc26dhtGg6EJutjSH1QXbXPbRNdVZ8": {Success, true, P2PKH, ""},
 		"MLkMXXwmuFFA5L6DmTejSgcxwZfT99f7pg": {Success, true, P2SH, ""},
 		"MAnkEjwEDDpB6CWDeRLVJ5tD3Es2cuKALT": {Success, true, P2SH, ""},
-		"MTf4tP1TCNBn8dNkyxeBVoPrFCcV
+		"MTf4tP1TCNBn8dNkyxeBVoPrFCcVzxJvvh": {Success, true, P2SH, ""},
+	}
+
+	for addr, result := range mainnetCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Ma
