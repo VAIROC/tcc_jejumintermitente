@@ -25,4 +25,6 @@ func TestLitecoinValidateAddress(t *testing.T) {
 	}
 
 	var testnetCases = map[string]*Result{
-		"m
+		"mhKYHWXLmQb93RuzyVmTK2KmM8KJPFrzdb": {Success, true, P2PKH, ""},
+		"muAGGFMnSCes3hyixTDw1abTSrQDqpbVsP": {Success, true, P2PKH, ""},
+		"mvvuJvego4AeD3gqk665JVF2Y
