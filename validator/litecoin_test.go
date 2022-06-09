@@ -20,4 +20,9 @@ func TestLitecoinValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range mainnetCases {
-		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Ma
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+		assert.False(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
+	}
+
+	var testnetCases = map[string]*Result{
+		"m
