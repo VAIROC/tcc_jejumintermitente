@@ -41,4 +41,6 @@ func TestLitecoinValidateAddress(t *testing.T) {
 	var invalidCases = map[string]*Result{
 		"Lhqgn2XKNtyAvGauTLhawxwLQFavDz4KYK1":                            {Success, false, Unknown, ""},
 		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854":                             {Success, false, Unknown, ""},
-		"1NQhfItWRwU6zg5G58TfQibHyJEuo6ZYXw":                             {Succes
+		"1NQhfItWRwU6zg5G58TfQibHyJEuo6ZYXw":                             {Success, false, Unknown, ""},
+		"2N3WBNpL3ZVj5PwQhSTPYZdrR7QXiKttChN":                            {Success, false, Unknown, ""},
+		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854 ":    
