@@ -38,4 +38,6 @@ func TestLitecoinValidateAddress(t *testing.T) {
 		assert.False(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
 	}
 
-	var 
+	var invalidCases = map[string]*Result{
+		"Lhqgn2XKNtyAvGauTLhawxwLQFavDz4KYK1":                            {Success, false, Unknown, ""},
+		"1NT5SNNaoAXzvxRUvY
