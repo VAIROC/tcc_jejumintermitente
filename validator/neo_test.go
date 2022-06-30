@@ -18,4 +18,9 @@ func TestNEOValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range mainnetCases {
-		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mai
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+
+	var invalidCases = map[string]*Result{
+		"ASax7usrW1qwVWpW3eG15mxvP7uGQUL1eM":         {Success, false, Unknown, ""},
+		"ATzoCmmsjqPHCD
