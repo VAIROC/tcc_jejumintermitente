@@ -23,4 +23,5 @@ func TestNEOValidateAddress(t *testing.T) {
 
 	var invalidCases = map[string]*Result{
 		"ASax7usrW1qwVWpW3eG15mxvP7uGQUL1eM":         {Success, false, Unknown, ""},
-		"ATzoCmmsjqPHCD
+		"ATzoCmmsjqPHCDPmY7mxEhSTGzpSKiTwUo ":        {Success, false, Unknown, ""},
+		"AEzoCmmsjqPHCDPmY7mxEhSTGzpSKiTwUo":         {Success, false, Unknown, ""}
