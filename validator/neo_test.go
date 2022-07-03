@@ -27,4 +27,5 @@ func TestNEOValidateAddress(t *testing.T) {
 		"AEzoCmmsjqPHCDPmY7mxEhSTGzpSKiTwUo":         {Success, false, Unknown, ""},
 		"2N3WBNpL3ZVj5PwQhSTPYZdrR7QXiKttChN":        {Success, false, Unknown, ""},
 		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854 ":        {Success, false, Unknown, ""},
-		"
+		"GEzKoZ59mhmpMzjNBWNoYKvLhFLAdHuL6P":         {Success, false, Unknown, ""},
+		"bb1qql2qamp2az7h5ejnjyuxt4294watgcmrd76n8c": {Success, false, U
