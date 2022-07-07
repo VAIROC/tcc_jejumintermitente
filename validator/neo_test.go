@@ -35,4 +35,6 @@ func TestNEOValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range invalidCases {
-		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result)
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+}
