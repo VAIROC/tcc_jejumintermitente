@@ -8,4 +8,11 @@ import (
 
 // Oasis ...
 type Oasis struct {
-	Client *
+	Client *RosettaClient
+}
+
+var _ RosettaValidator = (*Oasis)(nil)
+var _ Bech32Address = (*Oasis)(nil)
+
+// ValidateAddress returns validate result of stellar address
+func (v *Oasis)
