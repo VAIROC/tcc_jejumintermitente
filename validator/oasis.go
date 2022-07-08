@@ -17,4 +17,9 @@ var _ Bech32Address = (*Oasis)(nil)
 // ValidateAddress returns validate result of stellar address
 func (v *Oasis) ValidateAddress(addr string, network NetworkType) *Result {
 	if isValid := v.IsAddressFormatValid(addr, network); !isValid {
-		return &Result{Success
+		return &Result{Success, false, Unknown, ""}
+	}
+
+	addrType, err := v.Client.GetAccount(v.NetworkIdentifier(network), addr)
+	if err != nil {
+		return &Result{Failure, false, Unk
