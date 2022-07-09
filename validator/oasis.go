@@ -22,4 +22,14 @@ func (v *Oasis) ValidateAddress(addr string, network NetworkType) *Result {
 
 	addrType, err := v.Client.GetAccount(v.NetworkIdentifier(network), addr)
 	if err != nil {
-		return &Result{Failure, false, Unk
+		return &Result{Failure, false, Unknown, err.Error()}
+	}
+
+	if addrType == Unknown {
+		return &Result{Success, false, Unknown, ""}
+	}
+
+	return &Result{Success, true, addrType, ""}
+}
+
+// IsAddressF
