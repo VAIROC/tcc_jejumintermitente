@@ -46,4 +46,12 @@ func (v *Oasis) IsAddressFormatValid(addr string, network NetworkType) bool {
 	return true
 }
 
-// AddressHrp 
+// AddressHrp ...
+func (v *Oasis) AddressHrp() string {
+	return "oasis"
+}
+
+// Bech32ProgramLength ...
+func (v *Oasis) Bech32ProgramLength() int {
+	return 34
+}
