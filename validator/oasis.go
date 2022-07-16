@@ -32,4 +32,10 @@ func (v *Oasis) ValidateAddress(addr string, network NetworkType) *Result {
 	return &Result{Success, true, addrType, ""}
 }
 
-// IsAddressF
+// IsAddressFormatValid ...
+func (v *Oasis) IsAddressFormatValid(addr string, network NetworkType) bool {
+	if strings.ToLower(addr) != addr {
+		return false
+	}
+
+	hrp, data,
