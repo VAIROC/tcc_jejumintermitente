@@ -38,4 +38,12 @@ func (v *Oasis) IsAddressFormatValid(addr string, network NetworkType) bool {
 		return false
 	}
 
-	hrp, data,
+	hrp, data, err := bech32.Decode(addr)
+	if err != nil || hrp != v.AddressHrp() || len(data) != v.Bech32ProgramLength() {
+		return false
+	}
+
+	return true
+}
+
+// AddressHrp 
