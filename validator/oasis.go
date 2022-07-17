@@ -55,3 +55,8 @@ func (v *Oasis) AddressHrp() string {
 func (v *Oasis) Bech32ProgramLength() int {
 	return 34
 }
+
+// NetworkIdentifier ...
+func (v *Oasis) NetworkIdentifier(network NetworkType) RosettaNetworkIdentifier {
+	if network == Mainnet {
+		return RosettaNetworkIdentifier
