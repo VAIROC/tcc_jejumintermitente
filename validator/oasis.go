@@ -59,4 +59,11 @@ func (v *Oasis) Bech32ProgramLength() int {
 // NetworkIdentifier ...
 func (v *Oasis) NetworkIdentifier(network NetworkType) RosettaNetworkIdentifier {
 	if network == Mainnet {
-		return RosettaNetworkIdentifier
+		return RosettaNetworkIdentifier{
+			Blockchain: "Oasis",
+			Network:    "a4dc2c4537992d6d2908c9779927ccfee105830250d903fd1abdfaf42cb45631",
+		}
+	}
+
+	return RosettaNetworkIdentifier{
+		Blockchain
