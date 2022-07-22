@@ -66,4 +66,7 @@ func (v *Oasis) NetworkIdentifier(network NetworkType) RosettaNetworkIdentifier 
 	}
 
 	return RosettaNetworkIdentifier{
-		Blockchain
+		Blockchain: "Oasis",
+		Network:    "086a764a7a748eb6a2a3b046f152caf7e1cc9713478ce0565df253e1c5872963",
+	}
+}
