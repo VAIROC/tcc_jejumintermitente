@@ -15,4 +15,6 @@ func TestOasisValidateAddress(t *testing.T) {
 	validator := &Oasis{Client: &client}
 
 	var cases = map[string]*Result{
-		"oasis1qqs6ylpfurhf6gc9mw232fkmrt3d0673lyzc5xf2": {Success, true, Norm
+		"oasis1qqs6ylpfurhf6gc9mw232fkmrt3d0673lyzc5xf2": {Success, true, Normal, ""},
+		"oasis1qrad7s7nqm4gvyzr8yt2rdk0ref489rn3vn400d6": {Success, true, Normal, ""},
+		"oasis1qp29h8ykmxet46eqzw0wennrmmy4al3xzv37m3ca": {Success, true, Normal, "
