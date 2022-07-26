@@ -22,4 +22,9 @@ func TestOasisValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range cases {
-		assert
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+}
+
+func TestOasisValidateAddress_Failure(t *testing.T) {
+	client := RosettaClient{
