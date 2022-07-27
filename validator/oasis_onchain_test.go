@@ -27,4 +27,11 @@ func TestOasisValidateAddress(t *testing.T) {
 }
 
 func TestOasisValidateAddress_Failure(t *testing.T) {
-	client := RosettaClient{
+	client := RosettaClient{Endpoint: "https://fakeurl"}
+	validator := &Oasis{Client: &client}
+
+	var cases = []string{
+		"oasis1qrad7s7nqm4gvyzr8yt2rdk0ref489rn3vn400d6",
+	}
+
+	for _, a
