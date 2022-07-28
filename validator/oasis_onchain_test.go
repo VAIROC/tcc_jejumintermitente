@@ -34,4 +34,10 @@ func TestOasisValidateAddress_Failure(t *testing.T) {
 		"oasis1qrad7s7nqm4gvyzr8yt2rdk0ref489rn3vn400d6",
 	}
 
-	for _, a
+	for _, addr := range cases {
+		r := validator.ValidateAddress(addr, Mainnet)
+		assert.Equal(t, Failure, r.Status)
+		assert.False(t, r.IsValid)
+		assert.Equal(t, Unknown, r.Type)
+	}
+}
