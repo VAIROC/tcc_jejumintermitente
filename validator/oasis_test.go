@@ -22,4 +22,8 @@ func TestOasisIsAddressFormatValid(t *testing.T) {
 	}
 
 	var invalidCases = []string{
-		"oasis2qqs6ylpfurhf6gc9mw232fkmrt3d0673lyzc5
+		"oasis2qqs6ylpfurhf6gc9mw232fkmrt3d0673lyzc5xf2",
+		"Oasis1qqs6ylpfurhf6gc9mw232fkmrt3d0673lyzc5xf2",
+		"OASIS1QQS6YLPFURHF6GC9MW232FKMRT3D0673LYZC5XF2",
+		"oasis1qqs6ylpfurhf6gc9mw232fkmrt3d0673lyzc5xf3",
+		"o
