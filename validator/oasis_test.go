@@ -26,4 +26,9 @@ func TestOasisIsAddressFormatValid(t *testing.T) {
 		"Oasis1qqs6ylpfurhf6gc9mw232fkmrt3d0673lyzc5xf2",
 		"OASIS1QQS6YLPFURHF6GC9MW232FKMRT3D0673LYZC5XF2",
 		"oasis1qqs6ylpfurhf6gc9mw232fkmrt3d0673lyzc5xf3",
-		"o
+		"oasis1qqs6ylpfurhf6gc9mw232fkmrt3d0673lyzc5xf3qq",
+		"oasis1qqs6ylprhf6gc9mw232fkmrt3d0673lyzc5xf3",
+	}
+
+	for _, addr := range invalidCases {
+		a
