@@ -31,4 +31,7 @@ func TestOasisIsAddressFormatValid(t *testing.T) {
 	}
 
 	for _, addr := range invalidCases {
-		a
+		assert.False(t, validator.IsAddressFormatValid(addr, Mainnet))
+		assert.False(t, validator.IsAddressFormatValid(addr, Testnet))
+	}
+}
