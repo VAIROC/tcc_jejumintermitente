@@ -33,4 +33,17 @@ func (v *Polkadot) ValidateAddress(addr string, network NetworkType) *Result {
 	if bytes.Compare(checksum, expectedChecksum) == 0 {
 		return &Result{Success, true, Normal, ""}
 	}
-	return &Result{Success, f
+	return &Result{Success, false, Unknown, ""}
+}
+
+// AddressType ...
+func (v *Polkadot) AddressType() byte {
+	return 0
+}
+
+// AccountIdxLen ...
+func (v *Polkadot) AccountIdxLen() int {
+	return 32
+}
+
+// Check
