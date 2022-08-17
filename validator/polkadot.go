@@ -29,4 +29,8 @@ func (v *Polkadot) ValidateAddress(addr string, network NetworkType) *Result {
 	checksum := decoded[dataLen-v.ChecksumLen():]
 	payload := decoded[1 : dataLen-v.ChecksumLen()]
 
-	expectedChecksum := v.CalcC
+	expectedChecksum := v.CalcChecksum(payload)
+	if bytes.Compare(checksum, expectedChecksum) == 0 {
+		return &Result{Success, true, Normal, ""}
+	}
+	return &Result{Success, f
