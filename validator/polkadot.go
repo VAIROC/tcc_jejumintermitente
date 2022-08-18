@@ -46,4 +46,12 @@ func (v *Polkadot) AccountIdxLen() int {
 	return 32
 }
 
-// Check
+// ChecksumLen ...
+func (v *Polkadot) ChecksumLen() int {
+	return 2
+}
+
+// CalcChecksum ...
+func (v *Polkadot) CalcChecksum(payload []byte) []byte {
+	input := []byte("SS58PRE")
+	input = ap
