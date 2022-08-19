@@ -54,4 +54,7 @@ func (v *Polkadot) ChecksumLen() int {
 // CalcChecksum ...
 func (v *Polkadot) CalcChecksum(payload []byte) []byte {
 	input := []byte("SS58PRE")
-	input = ap
+	input = append(input, v.AddressType())
+	input = append(input, payload...)
+	return crypto.Blake2b512(input)[:v.ChecksumLen()]
+}
