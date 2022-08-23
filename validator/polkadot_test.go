@@ -16,4 +16,8 @@ func TestPolkadotValidateAddress(t *testing.T) {
 		"14Ns6kKbCoka3MS4Hn6b7oRw9fFejG8RH5rq5j63cWUfpPDJ": {Success, true, Normal, ""},
 		"16DGiP6jDwAfkAeqGfkUCtheKgUzTy7UeaiFFBAv8BwX3RhN": {Success, true, Normal, ""},
 		"1vTfju3zruADh7sbBznxWCpircNp9ErzJaPQZKyrUknApRu":  {Success, true, Normal, ""},
-		"1tZzPmcq8Auisttygmg9g6tPMtrh9i3b22D3tKXvde7ibRB":  {Success, true,
+		"1tZzPmcq8Auisttygmg9g6tPMtrh9i3b22D3tKXvde7ibRB":  {Success, true, Normal, ""},
+	}
+
+	for addr, result := range validCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), 
