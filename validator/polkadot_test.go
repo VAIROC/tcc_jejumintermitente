@@ -20,4 +20,9 @@ func TestPolkadotValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range validCases {
-		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), 
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+
+	var invalidCases = map[string]*Result{
+		"22xtAYsRUrmbniiWQqJtECiBQrMn8AypQcXhnQAc6RB6XkLW":     {Success, false, Unknown, ""},
+		"16DGiP6
