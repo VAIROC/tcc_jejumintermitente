@@ -25,4 +25,5 @@ func TestPolkadotValidateAddress(t *testing.T) {
 
 	var invalidCases = map[string]*Result{
 		"22xtAYsRUrmbniiWQqJtECiBQrMn8AypQcXhnQAc6RB6XkLW":     {Success, false, Unknown, ""},
-		"16DGiP6
+		"16DGiP6jDwAfkAeqGfkUCtheKGUzTy7UeaiFFBAv8BwX3RhN":     {Success, false, Unknown, ""},
+		"12xtAYsRUrmbniiWQqJtECiBQrMn8AypQcXhnQAc6RB6XeLW":     {S
