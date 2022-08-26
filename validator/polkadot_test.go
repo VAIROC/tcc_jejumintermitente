@@ -28,4 +28,6 @@ func TestPolkadotValidateAddress(t *testing.T) {
 		"16DGiP6jDwAfkAeqGfkUCtheKGUzTy7UeaiFFBAv8BwX3RhN":     {Success, false, Unknown, ""},
 		"12xtAYsRUrmbniiWQqJtECiBQrMn8AypQcXhnQAc6RB6XeLW":     {Success, false, Unknown, ""},
 		"123xtAYsRUrmbniiWQqJtECiBQrMn8AypQcXhnQAc6RB6XkLW":    {Success, false, Unknown, ""},
-		"1tZzPmcq8Auisttyddddgmg9g6tPMtrh9i3b2
+		"1tZzPmcq8Auisttyddddgmg9g6tPMtrh9i3b22D3tKXvde7ibRB ": {Success, false, Unknown, ""},
+		"bc1q3l9k4lm5z4mtsl6smmj9qxy03e65x3maz4p9xv":           {Success, false, Unknown, ""},
+		"abcde": {Success
