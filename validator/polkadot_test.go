@@ -30,4 +30,9 @@ func TestPolkadotValidateAddress(t *testing.T) {
 		"123xtAYsRUrmbniiWQqJtECiBQrMn8AypQcXhnQAc6RB6XkLW":    {Success, false, Unknown, ""},
 		"1tZzPmcq8Auisttyddddgmg9g6tPMtrh9i3b22D3tKXvde7ibRB ": {Success, false, Unknown, ""},
 		"bc1q3l9k4lm5z4mtsl6smmj9qxy03e65x3maz4p9xv":           {Success, false, Unknown, ""},
-		"abcde": {Success
+		"abcde": {Success, false, Unknown, ""},
+		"":      {Success, false, Unknown, ""},
+	}
+
+	for addr, result := range invalidCases {
+		assert.True(t, reflect.DeepEqual(validator.Va
