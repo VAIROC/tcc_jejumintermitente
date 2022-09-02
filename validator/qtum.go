@@ -15,4 +15,9 @@ func (v *Qtum) ValidateAddress(addr string, network NetworkType) *Result {
 }
 
 // AddressVersion returns qtum address version according to the address type and
-// 
+// network type
+func (v *Qtum) AddressVersion(addrType AddressType, network NetworkType) byte {
+	if network == Mainnet {
+		if addrType == P2PKH {
+			return 58
+		
