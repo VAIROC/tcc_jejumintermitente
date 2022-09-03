@@ -20,4 +20,12 @@ func (v *Qtum) AddressVersion(addrType AddressType, network NetworkType) byte {
 	if network == Mainnet {
 		if addrType == P2PKH {
 			return 58
-		
+		}
+		return 50
+	}
+
+	if addrType == P2PKH {
+		return 120
+	}
+	return 110
+}
