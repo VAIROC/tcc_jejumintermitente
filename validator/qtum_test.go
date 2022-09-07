@@ -24,4 +24,7 @@ func TestQtumValidateAddress(t *testing.T) {
 		assert.False(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
 	}
 
-	var testnetCases = map[strin
+	var testnetCases = map[string]*Result{
+		"qdvMzSaMH17gtpJLu33ug1cTegC5rshhg2": {Success, true, P2PKH, ""},
+		"qbgHcqxXYHVJZXHheGpHwLJsB5epDUtWxe": {Success, true, P2PKH, ""},
+		"qUcwyk
