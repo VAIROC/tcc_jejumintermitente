@@ -27,4 +27,8 @@ func TestQtumValidateAddress(t *testing.T) {
 	var testnetCases = map[string]*Result{
 		"qdvMzSaMH17gtpJLu33ug1cTegC5rshhg2": {Success, true, P2PKH, ""},
 		"qbgHcqxXYHVJZXHheGpHwLJsB5epDUtWxe": {Success, true, P2PKH, ""},
-		"qUcwyk
+		"qUcwykb7UstkWB2cLtaGjY19bfUjoxLaZS": {Success, true, P2PKH, ""},
+	}
+
+	for addr, result := range testnetCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testne
