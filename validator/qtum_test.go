@@ -31,4 +31,9 @@ func TestQtumValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range testnetCases {
-		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testne
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
+		assert.False(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+
+	var invalidCases = map[string]*Result{
+		"qdvMzSaMH17gtpJLu
