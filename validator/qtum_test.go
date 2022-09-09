@@ -36,4 +36,5 @@ func TestQtumValidateAddress(t *testing.T) {
 	}
 
 	var invalidCases = map[string]*Result{
-		"qdvMzSaMH17gtpJLu
+		"qdvMzSaMH17gtpJLu33ug1cTegC5rshhg21":                            {Success, false, Unknown, ""},
+		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854":                             {Success, false, Un
