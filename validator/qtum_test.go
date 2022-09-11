@@ -41,4 +41,5 @@ func TestQtumValidateAddress(t *testing.T) {
 		"QNG4mkK4thjgMaFHEStfW7gseWaVhcy6":                               {Success, false, Unknown, ""},
 		"2N3WBNpL3ZVj5PwQhSTPYZdrR7QXiKttChN":                            {Success, false, Unknown, ""},
 		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854 ":                            {Success, false, Unknown, ""},
-		"GEzKoZ59mhm
+		"GEzKoZ59mhmpMzjNBWNoYKvLhFLAdHuL6P":                             {Success, false, Unknown, ""},
+		"bc1qwqdg6squsna38e46795at95yu9atm8azzmyvckulcc7kytlcckxswvvz
