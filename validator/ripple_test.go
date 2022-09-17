@@ -12,4 +12,9 @@ func TestRippleValidateAddress(t *testing.T) {
 
 	var validCases = map[string]*Result{
 		"r3kmLJN5D28dHuH8vZNUZpMC43pEHpaocV": {Success, true, Normal, ""},
-		"rKLpjpCoXgLQQYQyj13zgay73rsgmzNH13": {Succe
+		"rKLpjpCoXgLQQYQyj13zgay73rsgmzNH13": {Success, true, Normal, ""},
+		"rPFLkxQk6xUGdGYEykqe7PR25Gr7mLHDc8": {Success, true, Normal, ""},
+		"rLwh9iqbPZ52Lg7wBNrUqoAJdddr3hs1MA": {Success, true, Normal, ""},
+	}
+
+	for
