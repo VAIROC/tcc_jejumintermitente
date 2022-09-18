@@ -17,4 +17,6 @@ func TestRippleValidateAddress(t *testing.T) {
 		"rLwh9iqbPZ52Lg7wBNrUqoAJdddr3hs1MA": {Success, true, Normal, ""},
 	}
 
-	for
+	for addr, result := range validCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+		assert.True(t, reflect.DeepEqual(vali
