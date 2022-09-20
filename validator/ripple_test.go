@@ -25,4 +25,6 @@ func TestRippleValidateAddress(t *testing.T) {
 	var invalidCases = map[string]*Result{
 		"rLwh9iqbPZ52Lg7wBNrUqoAJdddr3hs1M1 ": {Success, false, Unknown, ""},
 		"1PFLkxQk6xUGdGYEykqe7PR25Gr7mLHDc8":  {Success, false, Unknown, ""},
-		"rKLpjpCoXgLQQYQ1j13zgay73rsgmzNH13":  {Success, false, Unk
+		"rKLpjpCoXgLQQYQ1j13zgay73rsgmzNH13":  {Success, false, Unknown, ""},
+		"abcde":                               {Success, false, Unknown, ""},
+		"":                                    {Success, false, Unkn
