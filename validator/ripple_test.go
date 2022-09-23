@@ -27,4 +27,9 @@ func TestRippleValidateAddress(t *testing.T) {
 		"1PFLkxQk6xUGdGYEykqe7PR25Gr7mLHDc8":  {Success, false, Unknown, ""},
 		"rKLpjpCoXgLQQYQ1j13zgay73rsgmzNH13":  {Success, false, Unknown, ""},
 		"abcde":                               {Success, false, Unknown, ""},
-		"":                                    {Success, false, Unkn
+		"":                                    {Success, false, Unknown, ""},
+	}
+
+	for addr, result := range invalidCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+		assert
