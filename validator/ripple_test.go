@@ -32,4 +32,6 @@ func TestRippleValidateAddress(t *testing.T) {
 
 	for addr, result := range invalidCases {
 		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
-		assert
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
+	}
+}
