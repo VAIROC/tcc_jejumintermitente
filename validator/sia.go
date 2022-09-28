@@ -19,4 +19,10 @@ func (s *Sia) ValidateAddress(addr string, network NetworkType) *Result {
 	}
 
 	unlockhash := unlockhashWithChecksum[:32]
-	checksum256 := crypto
+	checksum256 := crypto.Blake2b256(unlockhash)
+
+	var validChecksum [6]byte
+	copy(validChecksum[:], checksum256[:6])
+
+	var checksum [6]byte
+	copy(checksum[:], unlockhashWithChecks
