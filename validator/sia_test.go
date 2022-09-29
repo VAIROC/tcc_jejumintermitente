@@ -31,3 +31,11 @@ func TestSiaValidateAddress(t *testing.T) {
 		"10fe5af357ef5dc4ec3d0b4d74de1c021420fbebfcd764b1bfd005695c12daff46419f79d610":  {Success, false, Unknown, ""},
 		"f55dc36e3e82a5b8759343c2cdb3659b3a5a25e3560adc3d333463dc":                      {Success, false, Unknown, ""},
 		"abcde": {Success, false, Unknown, ""},
+		"":      {Success, false, Unknown, ""},
+	}
+
+	for addr, result := range invalidCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
+	}
+}
