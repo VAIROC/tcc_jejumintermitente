@@ -25,4 +25,9 @@ func (s *Sia) ValidateAddress(addr string, network NetworkType) *Result {
 	copy(validChecksum[:], checksum256[:6])
 
 	var checksum [6]byte
-	copy(checksum[:], unlockhashWithChecks
+	copy(checksum[:], unlockhashWithChecksum[32:])
+	if checksum == validChecksum {
+		return &Result{Success, true, Normal, ""}
+	}
+	return &Result{Success, false, Unknown, ""}
+}
