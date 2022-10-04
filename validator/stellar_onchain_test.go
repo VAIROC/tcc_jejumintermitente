@@ -12,4 +12,7 @@ import (
 
 func TestStellarValidateAddress(t *testing.T) {
 	client := StellarClient{Endpoint: os.Getenv("AVA_STELLAR_ENDPOINT")}
-	validator :
+	validator := &Stellar{Client: &client}
+
+	var cases = map[string]*Result{
+		"GAI3GJ2Q3B35AOZJ36C4ANE3HSS4NK7WI6DNO4ZSHRAX6NG7BMX6VJER": {Success, true, Normal, "
