@@ -23,4 +23,10 @@ func TestStellarValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range cases {
-		assert.True(t, reflect.DeepEqual(validator.ValidateAddress
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+}
+
+func TestStellarValidateAddress_Failure(t *testing.T) {
+	client := StellarClient{Endpoint: "https://fakeurl"}
+	validator :
