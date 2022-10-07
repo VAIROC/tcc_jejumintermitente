@@ -19,4 +19,8 @@ func TestStellarValidateAddress(t *testing.T) {
 		"GBLKRATZODTSJNU7XTB5HY5VAAN63CPRT77UYZT2VLCNXE7F3YHSW22M": {Success, true, Normal, ""},
 		"GDDYS6MS7EBKGC4YNSWZQZGCMQ5LKGJ5R3VAT4JUCTF6XWMNQJNYWIMF": {Success, true, Normal, ""},
 		"GBWEQO3QPKKC7W6UMK7BWNBHBLIL54MNI5MSOMRB3TURYWJQ64XD3EN3": {Success, true, Normal, ""},
-		"GALAXY2447FJMEEQ2RIH7S42QAWVFQVE3DPOEYLT
+		"GALAXY2447FJMEEQ2RIH7S42QAWVFQVE3DPOEYLTUNRNAEENBM6IO6EH": {Success, true, Normal, ""},
+	}
+
+	for addr, result := range cases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress
