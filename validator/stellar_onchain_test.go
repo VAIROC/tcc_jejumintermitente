@@ -29,4 +29,11 @@ func TestStellarValidateAddress(t *testing.T) {
 
 func TestStellarValidateAddress_Failure(t *testing.T) {
 	client := StellarClient{Endpoint: "https://fakeurl"}
-	validator :
+	validator := &Stellar{Client: &client}
+
+	var cases = []string{
+		"GALAXY2447FJMEEQ2RIH7S42QAWVFQVE3DPOEYLTUNRNAEENBM6IO6EH",
+	}
+
+	for _, addr := range cases {
+		r := vali
