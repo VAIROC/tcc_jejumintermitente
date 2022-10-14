@@ -19,3 +19,8 @@ func TestStellarIsAddressFormatValid(t *testing.T) {
 
 	for _, addr := range validCases {
 		assert.True(t, validator.IsAddressFormatValid(addr, Mainnet), addr)
+	}
+
+	var invalidCases = []string{
+		"GBWEQO3QPKKC7W6UMK7BWNBHBLIL54MNI5MSOMRB3URYWJQ64XD3EN3",
+		"GALAXY2447FJMEEQ2RIH7S42QAWVFQVE3DPOEYLTUNRNAE
