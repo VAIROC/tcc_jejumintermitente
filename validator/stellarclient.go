@@ -7,4 +7,10 @@ import (
 )
 
 // StellarClient ...
-ty
+type StellarClient struct {
+	Endpoint string
+}
+
+// GetAccount ...
+func (c *StellarClient) GetAccount(addr string) (AddressType, error) {
+	url := fmt.Sprintf("%s/accounts/%s", c.
