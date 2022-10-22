@@ -22,3 +22,7 @@ func (c *StellarClient) GetAccount(addr string) (AddressType, error) {
 
 	if resp.StatusCode > 299 {
 		return Unknown, nil
+	}
+
+	return Normal, nil
+}
