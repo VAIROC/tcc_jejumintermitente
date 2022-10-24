@@ -15,4 +15,13 @@ func (v *Tera) ValidateAddress(addr string, network NetworkType) *Result {
 		return &Result{Success, false, Unknown, ""}
 	}
 
-	addrType, err := v.Client.GetAccount
+	addrType, err := v.Client.GetAccount(addr)
+	if err != nil {
+		return &Result{Failure, false, Unknown, err.Error()}
+	}
+
+	if addrType == Unknown {
+		return &Result{Success, false, Unknown, ""}
+	}
+
+	r
