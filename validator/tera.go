@@ -28,4 +28,7 @@ func (v *Tera) ValidateAddress(addr string, network NetworkType) *Result {
 }
 
 // IsAddressFormatValid ...
-func (v *Tera) IsAddressFormatValid(addr string, network NetworkT
+func (v *Tera) IsAddressFormatValid(addr string, network NetworkType) bool {
+	_, err := strconv.ParseUint(addr, 10, 32)
+	return err == nil
+}
