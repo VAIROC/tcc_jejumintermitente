@@ -24,4 +24,8 @@ func (v *Tera) ValidateAddress(addr string, network NetworkType) *Result {
 		return &Result{Success, false, Unknown, ""}
 	}
 
-	r
+	return &Result{Success, true, addrType, ""}
+}
+
+// IsAddressFormatValid ...
+func (v *Tera) IsAddressFormatValid(addr string, network NetworkT
