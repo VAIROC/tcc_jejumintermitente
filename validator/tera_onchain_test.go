@@ -7,4 +7,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/stretchr/testif
+	"github.com/stretchr/testify/assert"
+)
+
+func TestTeraValidateAddress(t *testing.T) {
+	client := TeraClient{Endpoint: os.Getenv("AVA_TERA_ENDPOINT")}
+	validator := &Tera{Client: 
