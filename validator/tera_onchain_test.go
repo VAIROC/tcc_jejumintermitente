@@ -23,4 +23,10 @@ func TestTeraValidateAddress(t *testing.T) {
 		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
 	}
 
-	var invalidCases = map[string]*Resu
+	var invalidCases = map[string]*Result{
+		"1898620001": {Success, false, Unknown, ""},
+		"1890070002": {Success, false, Unknown, ""},
+	}
+
+	for addr, result := range invalidCases {
+		assert.True(t, r
