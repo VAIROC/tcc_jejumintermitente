@@ -29,4 +29,9 @@ func TestTeraValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range invalidCases {
-		assert.True(t, r
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+}
+
+func TestTeraValidateAddress_Failure(t *testing.T) {
+	client := TeraCl
