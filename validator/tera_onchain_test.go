@@ -34,4 +34,12 @@ func TestTeraValidateAddress(t *testing.T) {
 }
 
 func TestTeraValidateAddress_Failure(t *testing.T) {
-	client := TeraCl
+	client := TeraClient{Endpoint: "https://fakeurl"}
+	validator := &Tera{Client: &client}
+
+	var cases = []string{
+		"224577",
+	}
+
+	for _, addr := range cases {
+		r := validator.Valid
