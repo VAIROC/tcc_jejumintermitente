@@ -18,3 +18,9 @@ func TestTeraIsAddressFormatValid(t *testing.T) {
 	for _, addr := range validCases {
 		assert.True(t, validator.IsAddressFormatValid(addr, Mainnet), addr)
 	}
+
+	var invalidCases = []string{
+		"-12345",
+		"11111111111111111111111111111",
+		"gDDYS6MS7EBKGC4YNSWZQZGCMQ5LKGJ5R3VAT4JUCTF6XWMNQJNYWIMF",
+		"th_2SYg4CBCZpCBTnYncSzE25sRUMN4uFDDKc1
