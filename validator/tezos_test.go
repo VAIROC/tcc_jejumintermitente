@@ -11,4 +11,6 @@ func TestTezosValidateAddress(t *testing.T) {
 	validator := &Tezos{}
 
 	var validCases = map[string]*Result{
-		"tz1
+		"tz1aQWeRw2MJpvvurJb78nwSpK8nvNg6EoCc": {Success, true, Normal, ""},
+		"tz1hkzS6pnfnHv9KzX1nbtqXVqUkzcem8FJs": {Success, true, Normal, ""},
+		"tz1RuFpeQEp8yC4B7yX4amBiLvpbcW7
