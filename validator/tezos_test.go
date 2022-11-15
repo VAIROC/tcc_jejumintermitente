@@ -17,4 +17,9 @@ func TestTezosValidateAddress(t *testing.T) {
 		"tz3UoffC7FG7zfpmvmjUmUeAaHvzdcUvAj6r": {Success, true, Normal, ""},
 		"tz3RB4aoyjov4KEVRbuhvQ1CKJgBJMWhaeB8": {Success, true, Normal, ""},
 		"tz2DhC4ThUEnQXt1eWcGFCkxyXMo92hP6F6o": {Success, true, Normal, ""},
-		"tz2PAC9Br2D4skziFKxpzTcnDaso531HNn6i": {Success,
+		"tz2PAC9Br2D4skziFKxpzTcnDaso531HNn6i": {Success, true, Normal, ""},
+	}
+
+	for addr, result := range validCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+		ass
