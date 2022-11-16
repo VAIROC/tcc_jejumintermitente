@@ -26,4 +26,7 @@ func TestTezosValidateAddress(t *testing.T) {
 	}
 
 	var invalidCases = map[string]*Result{
-		// don't su
+		// don't support KT1 address now
+		"KT1G1H6niMfXH2iuMbwzi77mUpJJRJ3uLkFj":   {Success, false, Unknown, ""},
+		"tz4RuFpeQEp8yC4B7yX4amBiLvpbcW7HHRrS":   {Success, false, Unknown, ""},
+		"dz
