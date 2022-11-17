@@ -29,4 +29,6 @@ func TestTezosValidateAddress(t *testing.T) {
 		// don't support KT1 address now
 		"KT1G1H6niMfXH2iuMbwzi77mUpJJRJ3uLkFj":   {Success, false, Unknown, ""},
 		"tz4RuFpeQEp8yC4B7yX4amBiLvpbcW7HHRrS":   {Success, false, Unknown, ""},
-		"dz
+		"dz3RB4aoyjov4KEVRbuhvQ1CKJgBJMWhaeB8":   {Success, false, Unknown, ""},
+		"tz3RB4aoyjov4KEVRbuhvQ1CKJgBJMWhaeB9":   {Success, false, Unknown, ""},
+		"tz2PAC9Br2D4skzifKxpzTcnDaso
