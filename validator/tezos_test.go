@@ -31,4 +31,6 @@ func TestTezosValidateAddress(t *testing.T) {
 		"tz4RuFpeQEp8yC4B7yX4amBiLvpbcW7HHRrS":   {Success, false, Unknown, ""},
 		"dz3RB4aoyjov4KEVRbuhvQ1CKJgBJMWhaeB8":   {Success, false, Unknown, ""},
 		"tz3RB4aoyjov4KEVRbuhvQ1CKJgBJMWhaeB9":   {Success, false, Unknown, ""},
-		"tz2PAC9Br2D4skzifKxpzTcnDaso
+		"tz2PAC9Br2D4skzifKxpzTcnDaso531HNn6i":   {Success, false, Unknown, ""},
+		"tz2PAC9Br2D4skziFKxpzTcnDaso531HNn6i12": {Success, false, Unknown, ""},
+		"abcde":                      
