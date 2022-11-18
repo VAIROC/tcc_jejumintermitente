@@ -37,4 +37,6 @@ func TestTezosValidateAddress(t *testing.T) {
 		"":                                       {Success, false, Unknown, ""},
 	}
 
-	for addr, result := range invalidCases 
+	for addr, result := range invalidCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, 
