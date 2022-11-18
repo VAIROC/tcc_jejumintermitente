@@ -33,4 +33,8 @@ func TestTezosValidateAddress(t *testing.T) {
 		"tz3RB4aoyjov4KEVRbuhvQ1CKJgBJMWhaeB9":   {Success, false, Unknown, ""},
 		"tz2PAC9Br2D4skzifKxpzTcnDaso531HNn6i":   {Success, false, Unknown, ""},
 		"tz2PAC9Br2D4skziFKxpzTcnDaso531HNn6i12": {Success, false, Unknown, ""},
-		"abcde":                      
+		"abcde":                                  {Success, false, Unknown, ""},
+		"":                                       {Success, false, Unknown, ""},
+	}
+
+	for addr, result := range invalidCases 
