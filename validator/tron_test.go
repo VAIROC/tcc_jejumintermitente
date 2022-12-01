@@ -18,4 +18,8 @@ func TestTronValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range validCases {
-		assert.True(t, reflect.DeepEqu
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
+	}
+
+	var
