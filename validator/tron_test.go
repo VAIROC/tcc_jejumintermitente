@@ -22,4 +22,6 @@ func TestTronValidateAddress(t *testing.T) {
 		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
 	}
 
-	var
+	var invalidCases = map[string]*Result{
+		"TKTcfBEKpp5ZRPwmiZ8SfLx8W7CDZ7PHCY ":        {Success, false, Unknown, ""},
+		"AN2aGVjEBi12hLWg65iGpraTn45h4jcLdU":         {Success, false, Unknown, 
