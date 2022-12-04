@@ -24,4 +24,6 @@ func TestTronValidateAddress(t *testing.T) {
 
 	var invalidCases = map[string]*Result{
 		"TKTcfBEKpp5ZRPwmiZ8SfLx8W7CDZ7PHCY ":        {Success, false, Unknown, ""},
-		"AN2aGVjEBi12hLWg65iGpraTn45h4jcLdU":         {Success, false, Unknown, 
+		"AN2aGVjEBi12hLWg65iGpraTn45h4jcLdU":         {Success, false, Unknown, ""},
+		"6way2gX9m8hjhWFSSaemoZk1tLDFLidvH":          {Success, false, Unknown, ""},
+		"412b71baefd4359f683c70e8ed81f5fb9aeff2cd89": {Success, fals
