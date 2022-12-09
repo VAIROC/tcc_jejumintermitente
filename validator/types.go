@@ -15,4 +15,8 @@ type AddressType string
 // List of AddressType
 const (
 	Unknown            AddressType = "Unknown"
-	Normal             AddressType = "N
+	Normal             AddressType = "Normal"
+	P2PKH              AddressType = "P2PKH"
+	P2SH               AddressType = "P2SH"
+	P2WPKH             AddressType = "P2WPKH"
+	P2WSH              AddressTy
