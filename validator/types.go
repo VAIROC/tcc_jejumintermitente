@@ -9,4 +9,10 @@ const (
 	Testnet NetworkType = "Testnet"
 )
 
-// Addres
+// AddressType ...
+type AddressType string
+
+// List of AddressType
+const (
+	Unknown            AddressType = "Unknown"
+	Normal             AddressType = "N
