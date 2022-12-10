@@ -22,4 +22,8 @@ const (
 	P2WSH              AddressType = "P2WSH"
 	CashAddrP2PKH      AddressType = "CashAddrP2PKH"
 	CashAddrP2SH       AddressType = "CashAddrP2SH"
-	HexWithChecksum    AddressType = "
+	HexWithChecksum    AddressType = "HexWithChecksum"
+	HexWithoutChecksum AddressType = "HexWithoutChecksum"
+	CKBShortPayload    AddressType = "CKBShortPayload"
+	FilID              AddressType = "FilID"
+	F
