@@ -26,4 +26,9 @@ const (
 	HexWithoutChecksum AddressType = "HexWithoutChecksum"
 	CKBShortPayload    AddressType = "CKBShortPayload"
 	FilID              AddressType = "FilID"
-	F
+	FilActor           AddressType = "FilActor"
+	FilSecp256k1       AddressType = "FileSecp256k1"
+	FilBLS             AddressType = "FileBLS"
+)
+
+/
