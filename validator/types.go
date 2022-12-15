@@ -31,4 +31,10 @@ const (
 	FilBLS             AddressType = "FileBLS"
 )
 
-/
+// ValidateStatus ...
+type ValidateStatus string
+
+// List of ValidateStatus
+const (
+	Success ValidateStatus = "Success"
+	Failure ValidateStatus = "F
