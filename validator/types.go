@@ -37,4 +37,13 @@ type ValidateStatus string
 // List of ValidateStatus
 const (
 	Success ValidateStatus = "Success"
-	Failure ValidateStatus = "F
+	Failure ValidateStatus = "Failure"
+)
+
+// Result is the validate result of address
+type Result struct {
+	Status  ValidateStatus
+	IsValid bool
+	Type    AddressType
+	Msg     string
+}
