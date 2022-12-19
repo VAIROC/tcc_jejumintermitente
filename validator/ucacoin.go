@@ -16,4 +16,11 @@ func (v *Ucacoin) ValidateAddress(addr string, network NetworkType) *Result {
 	}
 
 	expectP2PKH := v.AddressVersion(P2PKH, network)
-	if versio
+	if version == expectP2PKH {
+		return &Result{Success, true, P2PKH, ""}
+	}
+
+	return &Result{Success, false, Unknown, ""}
+}
+
+// AddressVersion returns qtum addr
