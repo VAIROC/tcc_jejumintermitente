@@ -23,4 +23,7 @@ func (v *Ucacoin) ValidateAddress(addr string, network NetworkType) *Result {
 	return &Result{Success, false, Unknown, ""}
 }
 
-// AddressVersion returns qtum addr
+// AddressVersion returns qtum address version according to the address type and
+// network type
+func (v *Ucacoin) AddressVersion(addrType AddressType, network NetworkType) byte {
+	if addrT
