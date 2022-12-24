@@ -26,4 +26,8 @@ func (v *Ucacoin) ValidateAddress(addr string, network NetworkType) *Result {
 // AddressVersion returns qtum address version according to the address type and
 // network type
 func (v *Ucacoin) AddressVersion(addrType AddressType, network NetworkType) byte {
-	if addrT
+	if addrType == P2PKH && network == Mainnet {
+		return 68
+	}
+	panic(ErrUnsupported.Error())
+}
