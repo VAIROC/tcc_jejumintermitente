@@ -18,4 +18,8 @@ func TestUcacoinValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range mainnetCases {
-		assert.True(t, refl
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+
+	var invalidCases = map[string]*Result{
+		"UcDkUrswRtP6vwZQf2F
