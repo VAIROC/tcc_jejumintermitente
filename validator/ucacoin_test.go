@@ -22,4 +22,6 @@ func TestUcacoinValidateAddress(t *testing.T) {
 	}
 
 	var invalidCases = map[string]*Result{
-		"UcDkUrswRtP6vwZQf2F
+		"UcDkUrswRtP6vwZQf2F26k68dyHqWG7Sw5":         {Success, false, Unknown, ""},
+		"DFwtUPqF3ornMxgs6gt6A3Rpcuwizzsnee":         {Success, false, Unknown, ""},
+		"1NQhfItWRwU6zg5G58
