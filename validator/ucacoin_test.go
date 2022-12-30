@@ -28,4 +28,6 @@ func TestUcacoinValidateAddress(t *testing.T) {
 		"QN3WBNpL3ZVj5PwQhSTPYZdrR7QXiKttChN":        {Success, false, Unknown, ""},
 		"UcehDN7bgkJ8VgCsM96r2W2UpRoiHSQizY ":        {Success, false, Unknown, ""},
 		"GEzKoZ59mhmpMzjNBWNoYKvLhFLAdHuL6P":         {Success, false, Unknown, ""},
-		"bakpp3d37
+		"bakpp3d37tWm48UjCo7U6azYejndijaghz":         {Success, false, Unknown, ""},
+		"aajt5HHvkLTT4qwhZA1z3zP2ib2tmFm56u":         {Success, false, Unknown, ""},
+		"bb1qql2qamp2az7
