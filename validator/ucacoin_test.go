@@ -30,4 +30,9 @@ func TestUcacoinValidateAddress(t *testing.T) {
 		"GEzKoZ59mhmpMzjNBWNoYKvLhFLAdHuL6P":         {Success, false, Unknown, ""},
 		"bakpp3d37tWm48UjCo7U6azYejndijaghz":         {Success, false, Unknown, ""},
 		"aajt5HHvkLTT4qwhZA1z3zP2ib2tmFm56u":         {Success, false, Unknown, ""},
-		"bb1qql2qamp2az7
+		"bb1qql2qamp2az7h5ejnjyuxt4294watgcmrd76n8c": {Success, false, Unknown, ""},
+		"abcde": {Success, false, Unknown, ""},
+		"":      {Success, false, Unknown, ""},
+	}
+
+	for addr, result := range invalidCas
