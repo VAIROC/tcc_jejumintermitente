@@ -12,4 +12,7 @@ type ZcashLike interface {
 	AddressVersion(addrType AddressType, network NetworkType) []byte
 }
 
-// ZcashlikeNormalAddrType .
+// ZcashlikeNormalAddrType ...
+func ZcashlikeNormalAddrType(v ZcashLike, addr string, network NetworkType) AddressType {
+	decoded, version, err := base58.CheckDecode(addr)
+	if 
