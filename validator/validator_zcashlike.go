@@ -15,4 +15,10 @@ type ZcashLike interface {
 // ZcashlikeNormalAddrType ...
 func ZcashlikeNormalAddrType(v ZcashLike, addr string, network NetworkType) AddressType {
 	decoded, version, err := base58.CheckDecode(addr)
-	if 
+	if err != nil || len(decoded) != 21 {
+		return Unknown
+	}
+
+	expectP2PKH := v.AddressVersion(P2PKH, network)
+	if bytes.Compare([]byte{version, decoded[0]}, expectP2PKH) == 0 {
+		re
