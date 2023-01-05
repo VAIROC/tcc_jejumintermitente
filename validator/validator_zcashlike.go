@@ -21,4 +21,12 @@ func ZcashlikeNormalAddrType(v ZcashLike, addr string, network NetworkType) Addr
 
 	expectP2PKH := v.AddressVersion(P2PKH, network)
 	if bytes.Compare([]byte{version, decoded[0]}, expectP2PKH) == 0 {
-		re
+		return P2PKH
+	}
+
+	expectP2SH := v.AddressVersion(P2SH, network)
+	if bytes.Compare([]byte{version, decoded[0]}, expectP2SH) == 0 {
+		return P2SH
+	}
+
+	return
