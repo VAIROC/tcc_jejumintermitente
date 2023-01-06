@@ -29,4 +29,5 @@ func ZcashlikeNormalAddrType(v ZcashLike, addr string, network NetworkType) Addr
 		return P2SH
 	}
 
-	return
+	return Unknown
+}
