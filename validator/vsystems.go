@@ -7,4 +7,9 @@ import (
 // Vsystems ...
 type Vsystems struct{}
 
-var _ Validator = (
+var _ Validator = (*Vsystems)(nil)
+
+const vsystemsAddrVersion = 5
+
+// ValidateAddress returns validate result of vsystems address
+func (v *Vsystems) ValidateAddress(addr strin
