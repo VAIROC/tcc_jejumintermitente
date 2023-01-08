@@ -16,4 +16,12 @@ func (v *Vsystems) ValidateAddress(addr string, network NetworkType) *Result {
 	encoder := base58check.BitcoinEncoder
 	encoder.ChecksumType = base58check.ChecksumBlake2bKeccak256
 
-	decoded, err := e
+	decoded, err := encoder.CheckDecode(addr)
+	if err != nil {
+		return &Result{Success, false, Unknown, ""}
+	}
+
+	version := decoded[0]
+	networkByte := decoded[1]
+
+	if vers
