@@ -24,4 +24,8 @@ func (v *Vsystems) ValidateAddress(addr string, network NetworkType) *Result {
 	version := decoded[0]
 	networkByte := decoded[1]
 
-	if vers
+	if version == vsystemsAddrVersion && networkByte == v.getNetworkByte(network) {
+		return &Result{Success, true, Normal, ""}
+	}
+
+	return &Result{Success, false, Unkno
