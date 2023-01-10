@@ -28,4 +28,12 @@ func (v *Vsystems) ValidateAddress(addr string, network NetworkType) *Result {
 		return &Result{Success, true, Normal, ""}
 	}
 
-	return &Result{Success, false, Unkno
+	return &Result{Success, false, Unknown, ""}
+}
+
+func (v *Vsystems) getNetworkByte(network NetworkType) byte {
+	if network == Mainnet {
+		return 77
+	}
+	return 84
+}
