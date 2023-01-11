@@ -9,4 +9,8 @@ import (
 
 // NOTE: no testnet cases
 func TestVsystemsValidateAddress(t *testing.T) {
-	validator := &Vsyste
+	validator := &Vsystems{}
+
+	var mainnetCases = map[string]*Result{
+		"ARF12jvtjz9caUFmiwBeRe1SPRGQhUWKrtd": {Success, true, Normal, ""},
+		"ARBQTCYws5FZAVtA1ZFLsGhBtPymr4Hp5CX": {Success, true, No
