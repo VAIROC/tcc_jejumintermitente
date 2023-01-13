@@ -16,4 +16,8 @@ func TestVsystemsValidateAddress(t *testing.T) {
 		"ARBQTCYws5FZAVtA1ZFLsGhBtPymr4Hp5CX": {Success, true, Normal, ""},
 		"AR45wyKHZnmt7ujqJRT7b4hSk9wX1bjwDkz": {Success, true, Normal, ""},
 		"ARCVpcq2i6rQ7kkzNeJ1jsMec6TLmC7RNHn": {Success, true, Normal, ""},
-	
+		"AR95ZdHV3Wx759r5io7gmb2GUz9vRtFF1F8": {Success, true, Normal, ""},
+		"AREExiJHmLb15ePMTyajnt4wb2bD4BENsM4": {Success, true, Normal, ""},
+	}
+
+	for addr, resul
