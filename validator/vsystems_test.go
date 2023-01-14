@@ -22,4 +22,8 @@ func TestVsystemsValidateAddress(t *testing.T) {
 
 	for addr, result := range mainnetCases {
 		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
-		assert.False(t, r
+		assert.False(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
+	}
+
+	var testnetCases = map[string]*Result{
+		"AUEef5yocCa7DND878N2FTAH35QKACAtqbH": {Success, true,
