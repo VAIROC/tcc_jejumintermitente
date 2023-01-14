@@ -26,4 +26,6 @@ func TestVsystemsValidateAddress(t *testing.T) {
 	}
 
 	var testnetCases = map[string]*Result{
-		"AUEef5yocCa7DND878N2FTAH35QKACAtqbH": {Success, true,
+		"AUEef5yocCa7DND878N2FTAH35QKACAtqbH": {Success, true, Normal, ""},
+		"AU3JbcU4nQfDUn5h9uhqzmpXNibP72Lhomh": {Success, true, Normal, ""},
+		"AU668Z1DLWqsWNxhdv4ay4KNjxEyPGtqHqy": {Success, true, Normal, ""},
