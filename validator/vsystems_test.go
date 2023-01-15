@@ -29,3 +29,6 @@ func TestVsystemsValidateAddress(t *testing.T) {
 		"AUEef5yocCa7DND878N2FTAH35QKACAtqbH": {Success, true, Normal, ""},
 		"AU3JbcU4nQfDUn5h9uhqzmpXNibP72Lhomh": {Success, true, Normal, ""},
 		"AU668Z1DLWqsWNxhdv4ay4KNjxEyPGtqHqy": {Success, true, Normal, ""},
+		"AUCDnRnuQ6ZLeakgPdESeiThj87Nw9SgLcF": {Success, true, Normal, ""},
+		"AUFLuQT2ynr1NgarK6SunEorEszLL2U97Nd": {Success, true, Normal, ""},
+		"ATvEDmb1KwS
