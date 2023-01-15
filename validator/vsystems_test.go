@@ -31,4 +31,8 @@ func TestVsystemsValidateAddress(t *testing.T) {
 		"AU668Z1DLWqsWNxhdv4ay4KNjxEyPGtqHqy": {Success, true, Normal, ""},
 		"AUCDnRnuQ6ZLeakgPdESeiThj87Nw9SgLcF": {Success, true, Normal, ""},
 		"AUFLuQT2ynr1NgarK6SunEorEszLL2U97Nd": {Success, true, Normal, ""},
-		"ATvEDmb1KwS
+		"ATvEDmb1KwSvuWCrz7epdTm5UD4xyc31qsz": {Success, true, Normal, ""},
+	}
+
+	for addr, result := range testnetCases {
+		assert.False(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainne
