@@ -44,4 +44,8 @@ func TestVsystemsValidateAddress(t *testing.T) {
 		"BTxHp2AhVkB6RxafH7nAWrAAaB5qgPAVd24":                                    {Success, false, Unknown, ""},
 		"TBVH33D3BQ2TWUR6TJNZTZOVR2M3AZDUZRDRKR4E":                               {Success, false, Unknown, ""},
 		"NBVH-33D3BQ2TWUR6TJNZTZOVR2M3A-ZDUZ-RDRK-R4EA":                          {Success, false, Unknown, ""},
-		"ATscE4ZCHfouSJ7mXacbYQA
+		"ATscE4ZCHfouSJ7mXacbYQAsSFZgUHPw22FATscE4ZCHfouSJ7mXacbYQAsSFZgUHPw22F": {Success, false, Unknown, ""},
+	}
+
+	for addr, result := range invalidCases {
+		assert.True(t, reflect.Deep
