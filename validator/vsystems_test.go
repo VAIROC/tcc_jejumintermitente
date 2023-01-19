@@ -42,4 +42,6 @@ func TestVsystemsValidateAddress(t *testing.T) {
 	var invalidCases = map[string]*Result{
 		"ATscE4ZCHfouSJ7mXacbYQAsSFZgUHPw22E":                                    {Success, false, Unknown, ""},
 		"BTxHp2AhVkB6RxafH7nAWrAAaB5qgPAVd24":                                    {Success, false, Unknown, ""},
-		"TBVH33D3BQ2TWUR6TJNZTZOVR2M3AZDUZRDRKR4E":                               {Success, false, Unknow
+		"TBVH33D3BQ2TWUR6TJNZTZOVR2M3AZDUZRDRKR4E":                               {Success, false, Unknown, ""},
+		"NBVH-33D3BQ2TWUR6TJNZTZOVR2M3A-ZDUZ-RDRK-R4EA":                          {Success, false, Unknown, ""},
+		"ATscE4ZCHfouSJ7mXacbYQA
