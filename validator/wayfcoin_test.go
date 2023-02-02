@@ -12,4 +12,6 @@ func TestWayfcoinValidateAddress(t *testing.T) {
 
 	var mainnetCases = map[string]*Result{
 		"WaaKv3fUm2s3H4qwpDTVdHNwjhxPoLSQFH": {Success, true, P2PKH, ""},
-		"WcPL
+		"WcPLF1mvbjNvYaS12kjaK9Gz5Gg9ZHyMGu": {Success, true, P2PKH, ""},
+		"WfdWw5VoKTgxAYYZdsMHvaJWYCy2n9gido": {Success, true, P2PKH, ""},
+		"WgxcsZERSMwTT37dUMgngt7FoyUsJuh7sL"
