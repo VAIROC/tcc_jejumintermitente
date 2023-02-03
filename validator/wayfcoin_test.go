@@ -14,4 +14,8 @@ func TestWayfcoinValidateAddress(t *testing.T) {
 		"WaaKv3fUm2s3H4qwpDTVdHNwjhxPoLSQFH": {Success, true, P2PKH, ""},
 		"WcPLF1mvbjNvYaS12kjaK9Gz5Gg9ZHyMGu": {Success, true, P2PKH, ""},
 		"WfdWw5VoKTgxAYYZdsMHvaJWYCy2n9gido": {Success, true, P2PKH, ""},
-		"WgxcsZERSMwTT37dUMgngt7FoyUsJuh7sL"
+		"WgxcsZERSMwTT37dUMgngt7FoyUsJuh7sL": {Success, true, P2PKH, ""},
+	}
+
+	for addr, result := range mainnetCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), re
