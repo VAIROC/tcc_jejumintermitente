@@ -18,4 +18,9 @@ func TestWayfcoinValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range mainnetCases {
-		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), re
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+
+	var invalidCases = map[string]*Result{
+		"DFwtUPqF3ornMxgs6gt6A3Rpcuwizzsnee":         {Success, false, Unknown, ""},
+		"WbxcsZERSMwTT37dUMgngt7FoyU
