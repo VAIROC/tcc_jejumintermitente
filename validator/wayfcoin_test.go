@@ -27,4 +27,11 @@ func TestWayfcoinValidateAddress(t *testing.T) {
 		"QN3WBNpL3ZVj5PwQhSTPYZdrR7QXiKttChN":        {Success, false, Unknown, ""},
 		"UcehDN7bgkJ8VgCsM96r2W2UpRoiHSQizY ":        {Success, false, Unknown, ""},
 		"GEzKoZ59mhmpMzjNBWNoYKvLhFLAdHuL6P":         {Success, false, Unknown, ""},
-		"WgxcsZErSMwTT37dUMgngt7Fo
+		"WgxcsZErSMwTT37dUMgngt7FoyUsJuh7sL":         {Success, false, Unknown, ""},
+		"aajt5HHvkLTT4qwhZA1z3zP2ib2tmFm56u":         {Success, false, Unknown, ""},
+		"bb1qql2qamp2az7h5ejnjyuxt4294watgcmrd76n8c": {Success, false, Unknown, ""},
+		"abcde": {Success, false, Unknown, ""},
+		"":      {Success, false, Unknown, ""},
+	}
+
+	for addr, result :
