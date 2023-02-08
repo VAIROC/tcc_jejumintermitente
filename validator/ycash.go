@@ -13,3 +13,20 @@ func (v *Ycash) ValidateAddress(addr string, network NetworkType) *Result {
 	}
 
 	return &Result{Success, false, Unknown, ""}
+}
+
+// AddressVersion returns ycash address version according to the address type and
+// network type
+func (v *Ycash) AddressVersion(addrType AddressType, network NetworkType) []byte {
+	if network == Mainnet {
+		if addrType == P2PKH {
+			return []byte{28, 40}
+		}
+		return []byte{28, 44}
+	}
+
+	if addrType == P2PKH {
+		return []byte{28, 149}
+	}
+	return []byte{28, 42}
+}
