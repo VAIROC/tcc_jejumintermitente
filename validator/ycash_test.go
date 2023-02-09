@@ -13,4 +13,7 @@ func TestYcashValidateAddress(t *testing.T) {
 
 	var mainnetCases = map[string]*Result{
 		"s1jF4pKgr8izDWNLZ9D1AtJfWFhgCY1Qexd": {Success, true, P2PKH, ""},
-		"s1MLh26NK6cMAPQqxBbuJcKVgo1C1tBkT3j": {Success, true
+		"s1MLh26NK6cMAPQqxBbuJcKVgo1C1tBkT3j": {Success, true, P2PKH, ""},
+		"s1gsQmQeieHAMh8caW9f5jDTVqZUmTsQBsX": {Success, true, P2PKH, ""},
+		"s35qM2AnDARUhfFnWYirrcXbeTd4f7SE7T5": {Success, true, P2SH, ""},
+		"s3KJ6JzL72o
