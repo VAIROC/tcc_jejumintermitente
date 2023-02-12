@@ -24,4 +24,6 @@ func TestYcashValidateAddress(t *testing.T) {
 		assert.False(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
 	}
 
-	var invalidCases = map
+	var invalidCases = map[string]*Result{
+		"s1MBh26NK6cMAPQqxBbuJcKVgo1C1tBkT3j":                            {Success, false, Unknown, ""},
+		"s1jF4pKgr8izDWNLZ9D1AtJfWF
