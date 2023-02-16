@@ -29,4 +29,5 @@ func TestYcashValidateAddress(t *testing.T) {
 		"s1jF4pKgr8izDWNLZ9D1AtJfWFMgCY1Qexd":                            {Success, false, Unknown, ""},
 		"t1gsQmQeieHAMh8caW9f5jDTVqZUmTsQBsX":                            {Success, false, Unknown, ""},
 		"2N3WBNpL3ZVj5PwQhSTPYZdrR7QXiKttChN":                            {Success, false, Unknown, ""},
-		"1NT5SNNaoAXzvxRUvYGxii
+		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854 ":                            {Success, false, Unknown, ""},
+		"GEzKoZ59mhmpMzjNBWNoYKvLhFLAdHuL6P":                             
