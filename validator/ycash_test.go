@@ -27,4 +27,6 @@ func TestYcashValidateAddress(t *testing.T) {
 	var invalidCases = map[string]*Result{
 		"s1MBh26NK6cMAPQqxBbuJcKVgo1C1tBkT3j":                            {Success, false, Unknown, ""},
 		"s1jF4pKgr8izDWNLZ9D1AtJfWFMgCY1Qexd":                            {Success, false, Unknown, ""},
-		"t1gsQmQeieHAMh8caW9f5jDTVqZUmTsQBsX":                            {Succ
+		"t1gsQmQeieHAMh8caW9f5jDTVqZUmTsQBsX":                            {Success, false, Unknown, ""},
+		"2N3WBNpL3ZVj5PwQhSTPYZdrR7QXiKttChN":                            {Success, false, Unknown, ""},
+		"1NT5SNNaoAXzvxRUvYGxii
