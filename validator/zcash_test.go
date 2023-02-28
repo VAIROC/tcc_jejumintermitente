@@ -20,4 +20,9 @@ func TestZcashValidateAddress(t *testing.T) {
 
 	for addr, result := range mainnetCases {
 		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
-		assert.False(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), r
+		assert.False(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
+	}
+
+	var testnetCases = map[string]*Result{
+		"tmVvvKBBYRnbK9JMf7AzWatJrkGh2LQwRJ7": {Success, true, P2PKH, ""},
+		"tmMjR9pDM2HLkhKzDvPd4wRo
