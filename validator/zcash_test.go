@@ -25,4 +25,6 @@ func TestZcashValidateAddress(t *testing.T) {
 
 	var testnetCases = map[string]*Result{
 		"tmVvvKBBYRnbK9JMf7AzWatJrkGh2LQwRJ7": {Success, true, P2PKH, ""},
-		"tmMjR9pDM2HLkhKzDvPd4wRo
+		"tmMjR9pDM2HLkhKzDvPd4wRoG5rAdJadrxB": {Success, true, P2PKH, ""},
+		"tmU2PyLY1hwSyZh4wi1iXBjT5pZsms68oxz": {Success, true, P2PKH, ""},
+		"t2BS7Mrbaef3fA4xrmkvDisFVXVr
