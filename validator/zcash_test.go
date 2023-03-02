@@ -27,4 +27,8 @@ func TestZcashValidateAddress(t *testing.T) {
 		"tmVvvKBBYRnbK9JMf7AzWatJrkGh2LQwRJ7": {Success, true, P2PKH, ""},
 		"tmMjR9pDM2HLkhKzDvPd4wRoG5rAdJadrxB": {Success, true, P2PKH, ""},
 		"tmU2PyLY1hwSyZh4wi1iXBjT5pZsms68oxz": {Success, true, P2PKH, ""},
-		"t2BS7Mrbaef3fA4xrmkvDisFVXVr
+		"t2BS7Mrbaef3fA4xrmkvDisFVXVrRBnZ6Qj": {Success, true, P2SH, ""},
+	}
+
+	for addr, result := range testnetCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testne
