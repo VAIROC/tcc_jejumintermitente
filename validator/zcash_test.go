@@ -36,4 +36,5 @@ func TestZcashValidateAddress(t *testing.T) {
 	}
 
 	var invalidCases = map[string]*Result{
-		"t1fuvbxcLNh
+		"t1fuvbxcLNhiPGnR2fcy4iMrntLn2y6z3iG":                            {Success, false, Unknown, ""},
+		"tmMjR9pDM3HLkhKzDvPd4wRoG5rAdJadrxB":                         
