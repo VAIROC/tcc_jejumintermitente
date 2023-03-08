@@ -40,4 +40,6 @@ func TestZcashValidateAddress(t *testing.T) {
 		"tmMjR9pDM3HLkhKzDvPd4wRoG5rAdJadrxB":                            {Success, false, Unknown, ""},
 		"1NQhfItWRwU6zg5G58TfQibHyJEuo6ZYXw":                             {Success, false, Unknown, ""},
 		"2N3WBNpL3ZVj5PwQhSTPYZdrR7QXiKttChN":                            {Success, false, Unknown, ""},
-		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854 ":                            {Success, false, U
+		"1NT5SNNaoAXzvxRUvYGxiif93q7o9u4854 ":                            {Success, false, Unknown, ""},
+		"GEzKoZ59mhmpMzjNBWNoYKvLhFLAdHuL6P":                             {Success, false, Unknown, ""},
+		"bc1qwqdg6squsna38e46795at95yu9atm8azzmyvckulcc
