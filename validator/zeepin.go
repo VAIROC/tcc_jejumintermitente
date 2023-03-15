@@ -19,4 +19,11 @@ func (v *Zeepin) ValidateAddress(addr string, network NetworkType) *Result {
 
 	decoded, err := encoder.CheckDecode(addr)
 	if err != nil {
-	
+		return &Result{Success, false, Unknown, ""}
+	}
+
+	version := decoded[0]
+	program := decoded[1:]
+
+	if version == zeepinAddrVersion && len(program) == 20 {
+		re
