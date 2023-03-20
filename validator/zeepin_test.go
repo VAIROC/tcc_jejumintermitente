@@ -21,4 +21,9 @@ func TestZeepinValidateAddress(t *testing.T) {
 
 	for addr, result := range mainnetCases {
 		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
-		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), re
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Testnet), result), addr)
+	}
+
+	var invalidCases = map[string]*Result{
+		"ZWC6BzJXCGwZ6ePv71isGgFjVoQuHME7PZ5":                                    {Success, false, Unknown, ""},
+		"ZWC6BzJXGG
