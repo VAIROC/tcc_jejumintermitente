@@ -27,4 +27,6 @@ func TestZeepinValidateAddress(t *testing.T) {
 	var invalidCases = map[string]*Result{
 		"ZWC6BzJXCGwZ6ePv71isGgFjVoQuHME7PZ5":                                    {Success, false, Unknown, ""},
 		"ZWC6BzJXGGwZ6ePv76sGgFjVoQuHME7PZ4":                                     {Success, false, Unknown, ""},
-		"0100000000000000000000000000000000000000":                            
+		"0100000000000000000000000000000000000000":                               {Success, false, Unknown, ""},
+		"AVee5uM9eHNSfcm1nVrS6SxCe6gKMtc6hJ":                                     {Success, false, Unknown, ""},
+		"NBVH
