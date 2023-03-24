@@ -29,4 +29,5 @@ func TestZeepinValidateAddress(t *testing.T) {
 		"ZWC6BzJXGGwZ6ePv76sGgFjVoQuHME7PZ4":                                     {Success, false, Unknown, ""},
 		"0100000000000000000000000000000000000000":                               {Success, false, Unknown, ""},
 		"AVee5uM9eHNSfcm1nVrS6SxCe6gKMtc6hJ":                                     {Success, false, Unknown, ""},
-		"NBVH
+		"NBVH-33D3BQ2TWUR6TJNZTZOVR2M3A-ZDUZ-RDRK-R4EA":                          {Success, false, Unknown, ""},
+		"ATscE4ZCHfouSJ7mXacbYQAsSFZgUHPw22FATscE4ZCHfouSJ7mXacbYQAsSFZgUHP
