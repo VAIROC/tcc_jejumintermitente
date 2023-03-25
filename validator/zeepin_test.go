@@ -30,4 +30,8 @@ func TestZeepinValidateAddress(t *testing.T) {
 		"0100000000000000000000000000000000000000":                               {Success, false, Unknown, ""},
 		"AVee5uM9eHNSfcm1nVrS6SxCe6gKMtc6hJ":                                     {Success, false, Unknown, ""},
 		"NBVH-33D3BQ2TWUR6TJNZTZOVR2M3A-ZDUZ-RDRK-R4EA":                          {Success, false, Unknown, ""},
-		"ATscE4ZCHfouSJ7mXacbYQAsSFZgUHPw22FATscE4ZCHfouSJ7mXacbYQAsSFZgUHP
+		"ATscE4ZCHfouSJ7mXacbYQAsSFZgUHPw22FATscE4ZCHfouSJ7mXacbYQAsSFZgUHPw22F": {Success, false, Unknown, ""},
+	}
+
+	for addr, result := range invalidCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Main
