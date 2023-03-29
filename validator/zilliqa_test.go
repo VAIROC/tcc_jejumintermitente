@@ -17,4 +17,8 @@ func TestZilliqaValidateAddress(t *testing.T) {
 	}
 
 	for addr, result := range mainnetCases {
-		ass
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+
+	var invalidCases = map[string]*Result{
+		"zib13gpgtu0a
