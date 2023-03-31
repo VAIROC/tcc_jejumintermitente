@@ -21,4 +21,5 @@ func TestZilliqaValidateAddress(t *testing.T) {
 	}
 
 	var invalidCases = map[string]*Result{
-		"zib13gpgtu0a
+		"zib13gpgtu0a2shq5ck66cmx8vk8vdzv92agkcqhsa":                      {Success, false, Unknown, ""},
+		"zil13gegtu0a2shq5ck66cmx8vk8vdzv92agkcqhsa":                      {S
