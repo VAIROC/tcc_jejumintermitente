@@ -28,4 +28,10 @@ func TestZilliqaValidateAddress(t *testing.T) {
 		"zil144fujqgsuvv5zyr2v23m7ndyt3artkh78kyd92 ":                     {Success, false, Unknown, ""},
 		"zil1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0gdcccefvpysxf3pjxtptv": {Success, false, Unknown, ""},
 		"abcde": {Success, false, Unknown, ""},
-		"":      {
+		"":      {Success, false, Unknown, ""},
+	}
+
+	for addr, result := range invalidCases {
+		assert.True(t, reflect.DeepEqual(validator.ValidateAddress(addr, Mainnet), result), addr)
+	}
+}
