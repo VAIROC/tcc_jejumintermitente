@@ -25,4 +25,7 @@ func TestZilliqaValidateAddress(t *testing.T) {
 		"zil13gegtu0a2shq5ck66cmx8vk8vdzv92agkcqhsa":                      {Success, false, Unknown, ""},
 		"zil144fujqgsuvv5zyr2v23m7ndyt3artkh78eyd92 ":                     {Success, false, Unknown, ""},
 		"ZIL1pyvfpng2rv2p47ha67yh0edd7eyxwyv0w8hzt6":                      {Success, false, Unknown, ""},
-		"zil144fujqgsuvv5zyr2v23m7ndyt3artkh78kyd92 ":                     {Success, false, Un
+		"zil144fujqgsuvv5zyr2v23m7ndyt3artkh78kyd92 ":                     {Success, false, Unknown, ""},
+		"zil1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0gdcccefvpysxf3pjxtptv": {Success, false, Unknown, ""},
+		"abcde": {Success, false, Unknown, ""},
+		"":      {
